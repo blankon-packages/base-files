@@ -1,3 +1,9 @@
+base-files (4.0.0ubuntu3-0blankon2) konde; urgency=low
+
+  * Cabang baru dari base-files
+
+ -- Andy Apdhani <imtheface@ubuntu.com>  Wed, 15 Aug 2007 15:47:21 +0700
+
 base-files (4.0.0ubuntu3-0blankon1) konde; urgency=low
 
   * Impor dari 4.0.0ubuntu3
