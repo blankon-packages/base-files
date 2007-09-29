@@ -1,3 +1,9 @@
+base-files (4.0.0ubuntu4) gutsy; urgency=low
+
+  * Trigger rebuild for hppa.
+
+ -- LaMont Jones <lamont@ubuntu.com>  Fri, 28 Sep 2007 10:22:50 -0600
+
 base-files (4.0.0ubuntu3) gutsy; urgency=low
 
   * Added version 3 of the LGPL license, taken from
