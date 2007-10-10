@@ -1,3 +1,9 @@
+base-files (4.0.0ubuntu5) gutsy; urgency=low
+
+  * Prepare for Gutsy release: etc/{lsb-release,issue,issue.net}.
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Mon, 08 Oct 2007 11:21:08 +0200
+
 base-files (4.0.0ubuntu4) gutsy; urgency=low
 
   * Trigger rebuild for hppa.

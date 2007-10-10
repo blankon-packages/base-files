@@ -1,3 +1,9 @@
+base-files (4.0.0ubuntu5-0blankon1) konde; urgency=low
+
+  *  Impor dari 4.0.0ubuntu5
+
+ -- Andy Apdhani <imtheface@ubuntu.com>  Wed, 10 Oct 2007 21:07:19 +0700
+
 base-files (4.0.0ubuntu4-0blankon2) konde; urgency=low
 
   * Ganti branding Ubuntu ke BlankOn
