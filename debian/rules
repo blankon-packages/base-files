@@ -43,8 +43,8 @@ binary-arch: build
 	install -p -m 644 share/* debian/tmp/usr/share/base-files
 	install -p -m 644 licenses/* debian/tmp/usr/share/common-licenses
 	ln -s GFDL-1.2 debian/tmp/usr/share/common-licenses/GFDL
-	ln -s LGPL-2.1 debian/tmp/usr/share/common-licenses/LGPL
-	ln -s GPL-2    debian/tmp/usr/share/common-licenses/GPL
+	ln -s LGPL-3 debian/tmp/usr/share/common-licenses/LGPL
+	ln -s GPL-3 debian/tmp/usr/share/common-licenses/GPL
 	install -p -m 644 etc/* debian/tmp/etc
 	rm -f debian/tmp/etc/motd
 ifeq ($(DEB_HOST_GNU_SYSTEM),gnu)

@@ -1,3 +1,38 @@
+base-files (4.0.1ubuntu1) hardy; urgency=low
+
+  * Merge from Debian unstable.
+  * Remaining Ubuntu changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Restore order line in /etc/host.conf with a comment.
+    - Add default /etc/networks file.
+  * Ubuntu changes dropped:
+    - Added version 3 of the LGPL license, taken from
+      http://www.gnu.org/licenses/lgpl-3.0.txt
+  * ubuntu-devel -> ubuntu-devel-discuss for the Maintainer field.
+
+ -- Steve Kowalik <stevenk@ubuntu.com>  Mon, 29 Oct 2007 07:31:52 +1100
+
+base-files (4.0.1) unstable; urgency=low
+
+  * Added GPL-3 and LGPL-3 to common-licenses, as they are expected to
+    become common licenses. Closes: #431176. Please note that GPL and LGPL
+    will now point to GPL-3 and LGPL-3, as they are the most recent ones.
+    Packages under GPLv2 without "or any later version" must definitely
+    refer to the versioned file, not to the GPL symlink anymore.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 19 Aug 2007 19:15:30 +0200
+
+base-files (4.0.0ubuntu6) hardy; urgency=low
+
+  * Update for Hardy: etc/{lsb-release,issue,issue.net}.
+
+ -- Matthias Klose <doko@ubuntu.com>  Fri, 19 Oct 2007 19:24:18 +0000
+
 base-files (4.0.0ubuntu5) gutsy; urgency=low
 
   * Prepare for Gutsy release: etc/{lsb-release,issue,issue.net}.
@@ -1128,3 +1163,4 @@ base-files (1.2.0-1) unstable; urgency=low
     /etc/passwd and /etc/group are installed by the "base-passwd" package.
 
  -- Bruce Perens <bruce@pixar.com>  Thu, 14 Nov 1996 21:02:09 -0800
+
