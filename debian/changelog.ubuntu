@@ -1,3 +1,13 @@
+base-files (4.0.1ubuntu2) hardy; urgency=low
+
+  * Implement LSB-3.1, 16.2 (/etc/profile.d). Addresses LP #102105.
+    According to Debian policy 9.9 (Environment variables), programs
+    installed by packages must not depend on environment variables
+    to get reasonable defaults. Do not use this LSB feature to set
+    or modify environment variables.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 06 Feb 2008 15:27:17 +0100
+
 base-files (4.0.1ubuntu1) hardy; urgency=low
 
   * Merge from Debian unstable.

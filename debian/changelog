@@ -1,3 +1,9 @@
+base-files (4.0.1ubuntu2-1blankon1) lontara; urgency=low
+
+  * Import dari 4.0.1ubuntu2
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Sun, 23 Mar 2008 00:16:43 +0100
+
 base-files (4.0.1ubuntu1-1blankon1) lontara; urgency=low
 
   * Merge from Ubuntu hardy

@@ -4,6 +4,7 @@ dev
 etc
 etc/default
 etc/skel
+etc/profile.d
 home
 lib
 mnt
