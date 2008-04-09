@@ -1,3 +1,9 @@
+base-files (4.0.1ubuntu3) hardy; urgency=low
+
+  * Added information about the docs web page (LP: #159371)
+
+ -- Nicolas Valcarcel <nvalcarcel@ubuntu.com>  Thu, 03 Apr 2008 00:13:05 -0500
+
 base-files (4.0.1ubuntu2) hardy; urgency=low
 
   * Implement LSB-3.1, 16.2 (/etc/profile.d). Addresses LP #102105.
