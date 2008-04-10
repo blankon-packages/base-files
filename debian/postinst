@@ -118,10 +118,25 @@ if [ ! -f /usr/info/dir ] && [ ! -f /usr/share/info/dir ]; then
 fi
 rm -f /etc/base-files.mailsymlink
 
+if [ "$2" = 4.0.1ubuntu3 ]; then
+  if [ -f /etc/motd ] && [ ! -L /etc/motd ] && [ -L /etc/motd.old ]; then
+    rm /etc/motd
+    mv /etc/motd.old /etc/motd
+  fi
+fi
+
 if [ "$1" = "configure" ] && [ "$2" != "" ]; then
-  if [ -f /etc/motd ]; then
+  newmd=`awk 'NR > 2' /usr/share/base-files/motd | md5sum | awk '{print $1}'`
+  if [ -f /etc/motd.tail ]; then
+    oldmd=`awk 'NR > 1' /etc/motd.tail | md5sum | awk '{print $1}'`
+    if [ "$oldmd" != "$newmd" ]; then
+      if grep -q "$oldmd" /usr/share/base-files/motd.md5sums; then
+        mv /etc/motd.tail /etc/motd.tail.old
+        awk 'NR > 1' /usr/share/base-files/motd > /etc/motd.tail
+      fi
+    fi
+  elif [ -f /etc/motd ] && [ ! -L /etc/motd ]; then
     oldmd=`awk 'NR > 2' /etc/motd | md5sum | awk '{print $1}'`
-    newmd=`awk 'NR > 2' /usr/share/base-files/motd | md5sum | awk '{print $1}'`
     if [ "$oldmd" != "$newmd" ]; then
       if grep -q "$oldmd" /usr/share/base-files/motd.md5sums; then
         awk 'NR <= 2' /etc/motd > /etc/motd.new

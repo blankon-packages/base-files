@@ -1,3 +1,12 @@
+base-files (4.0.1ubuntu4) hardy; urgency=low
+
+  * Update the motd upgrade handling to know about /etc/motd.tail, which
+    is where the static contents of the motd are stored now with
+    initscripts 2.86.ds1-7 and above; and handle fixing the broken 
+    upgrades introduced in 4.0.1ubuntu3.  LP: #214853
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Thu, 10 Apr 2008 00:02:43 +0000
+
 base-files (4.0.1ubuntu3) hardy; urgency=low
 
   * Added information about the docs web page (LP: #159371)
