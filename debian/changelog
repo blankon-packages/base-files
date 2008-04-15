@@ -1,3 +1,9 @@
+base-files (4.0.1ubuntu5-0blankon1~dev) lontara; urgency=low
+
+  * Update upstream to 4.0.1ubuntu5
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Tue, 15 Apr 2008 18:03:21 +0200
+
 base-files (4.0.1ubuntu4-1blankon1) lontara; urgency=low
 
   * Change documentation URL
