@@ -1,3 +1,23 @@
+base-files (4.0.1ubuntu4-1blankon1) lontara; urgency=low
+
+  * Change documentation URL
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Fri, 11 Apr 2008 10:39:19 +0700
+
+base-files (4.0.1ubuntu4-0blankon1) lontara; urgency=low
+
+  * Update upstream to 4.0.1ubuntu4
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Fri, 11 Apr 2008 01:11:00 +0700
+
+base-files (4.0.1ubuntu3-1blankon1) lontara; urgency=low
+
+  * Update upstream to 4.0.1ubuntu3
+  * Add link to BlankOn Mailing List
+  * Add md5sum info about Hardy's motd
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Thu, 10 Apr 2008 00:53:17 +0700
+
 base-files (4.0.1ubuntu2-1blankon1) lontara; urgency=low
 
   * Import dari 4.0.1ubuntu2
