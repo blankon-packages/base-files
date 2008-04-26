@@ -1,3 +1,9 @@
+base-files (4.0.1ubuntu5-1blankon1) lontara; urgency=low
+
+  * Perbaiki etc/
+
+ -- mdamt <mdamt@mnots.eu>  Sat, 26 Apr 2008 08:40:07 +0300
+
 base-files (4.0.1ubuntu5-0blankon1~dev) lontara; urgency=low
 
   * Update upstream to 4.0.1ubuntu5
