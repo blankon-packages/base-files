@@ -1,3 +1,9 @@
+base-files (4.0.1ubuntu6-0blankon1) meuligoe; urgency=low
+
+  * Update untuk Meuligoe: etc/{lsb-release,issue,issue.net}
+
+ -- MSulchan Darmawan <bleketux@gmail.com>  Fri, 27 Jun 2008 17:11:08 +0700
+
 base-files (4.0.1ubuntu5-1blankon1) lontara; urgency=low
 
   * Perbaiki etc/

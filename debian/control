@@ -1,8 +1,8 @@
 Source: base-files
 Section: admin
 Priority: required
-Maintainer: BlankOn Developers <BlankOn@googlegroups.com>
-XSBC-Original-Maintainer: Santiago Vila <sanvila@debian.org>, Ubuntu Core Developers <ubuntu-devel@lists.ubuntu.com>
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Santiago Vila <sanvila@debian.org>
 Standards-Version: 3.7.2
 
 Package: base-files

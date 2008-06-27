@@ -1,3 +1,9 @@
+base-files (4.0.1ubuntu6) intrepid; urgency=low
+
+  * Update for Intrepid: etc/{lsb-release,issue,issue.net}
+
+ -- Adam Conrad <adconrad@ubuntu.com>  Mon, 28 Apr 2008 12:24:54 -0600
+
 base-files (4.0.1ubuntu5) hardy; urgency=low
 
   * Prepare for Hardy release: etc/{lsb-release,issue,issue.net}.
