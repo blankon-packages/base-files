@@ -59,6 +59,8 @@ endif
 	sed -e "s&#OSNAME#&$(OSNAME)&g" etc/issue.net \
 		> debian/tmp/etc/issue.net
 	gzip -9 $(docdir)/changelog
+	cd debian/tmp && \
+		md5sum `find usr -type f` > DEBIAN/md5sums
 	chown -R root:root debian/tmp
 	cd debian/tmp && chown root:src     usr/src
 	cd debian/tmp && chown root:staff   var/local
@@ -66,10 +68,6 @@ endif
 	cd debian/tmp && chmod 1777 `cat ../1777-dirs`
 	cd debian/tmp && chmod 2775 `cat ../2775-dirs`
 	dpkg-gencontrol -pbase-files -isp
-ifeq ($(shell dpkg-architecture -qDEB_BUILD_ARCH),amd64)
-	sed -i -e 's/^Depends:/Depends: libc6 \(>= 2.4-1ubuntu3\),/' \
-		debian/tmp/DEBIAN/control
-endif
 	dpkg --build debian/tmp ..
 
 binary-indep: build

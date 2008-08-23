@@ -8,7 +8,7 @@ device files in the /dev directory.
 Currently, the device files do not belong to any particular package,
 so the `base' package does not exist anymore, but if you upgraded your
 system from a very early Debian release, it is possible that you still
-have it installed (in this case it should not removed!).
+have it installed (in this case it should not be removed!).
 
 Having this package installed is harmless, but there are a few reasons
 why you might want to have it uninstalled:
