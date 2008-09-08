@@ -1,3 +1,9 @@
+base-files (4.0.4ubuntu1-1blankon1) meuligoe; urgency=low
+
+  * Ubah DISTRIB_CODENAME menjadi "meuligoe" (huruf kecil semua)
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Mon, 08 Sep 2008 08:06:12 +0200
+
 base-files (4.0.4ubuntu1-0blankon1) meuligoe; urgency=low
 
   * Perbaharui upstream ke versi 4.0.4ubuntu1
