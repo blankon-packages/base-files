@@ -1,3 +1,11 @@
+base-files (4.0.4ubuntu2-0blankon1) meuligoe; urgency=low
+
+  * Perbaharui versi mengikuti upstream terbaru. Namun perubahan pada
+    upstream ini tidak diterapkan karena BlankOn belum mau mengeluarkan
+    kandidat rilis :)
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Wed, 22 Oct 2008 11:37:30 +0200
+
 base-files (4.0.4ubuntu1-1blankon1) meuligoe; urgency=low
 
   * Ubah DISTRIB_CODENAME menjadi "meuligoe" (huruf kecil semua)
