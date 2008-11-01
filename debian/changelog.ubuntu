@@ -1,3 +1,19 @@
+base-files (4.0.4ubuntu2.2) intrepid-security; urgency=low
+
+  * Ubiquity cleanup: do not fail on missing symlink targets.
+
+ -- Kees Cook <kees@ubuntu.com>  Thu, 30 Oct 2008 10:55:33 -0700
+
+base-files (4.0.4ubuntu2.1) intrepid-security; urgency=low
+
+  * SECURITY UPDATE: change permissions of kernels copied from the Live CD
+    by Ubiquity 1.9.4 thru 1.10.9. LP: #290798.
+
+  * Correct group ownership of files changed by Ubiquity 1.7.5 thru 1.10.9.
+    LP: #288479.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Wed, 29 Oct 2008 20:50:56 +0000
+
 base-files (4.0.4ubuntu2) intrepid; urgency=low
 
   * Prepare for Intrepid release: etc/{lsb-release,issue,issue.net}.

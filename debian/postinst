@@ -146,6 +146,58 @@ if [ "$1" = "configure" ] && [ "$2" != "" ]; then
   fi
 fi
 
+# Ubiquity 1.9.4 thru 1.10.9 failed to set kernel permissions after
+# copying from the Live CD, leaving the file globally writable.
+if dpkg --compare-versions "$2" le-nl "4.0.4ubuntu2" &&
+   dpkg --compare-versions "$2" ge "4.0.1ubuntu5"
+then
+  find -L /boot -name "vmlinu[zx]-*" -perm /g+w,o+w -print0 |
+	xargs -0rt chmod g-w,o-w || true
+fi
+
+# Ubiquity 1.7.5 thru 1.10.9 failed to restore the group id of
+# the process to root after doing work as the Live CD user, creating
+# files with that user's group as a result.
+if dpkg --compare-versions "$2" le-nl "4.0.4ubuntu2" &&
+   dpkg --compare-versions "$2" ge "4.0.1ubuntu1"
+then
+  NINER_NINER_PATHS="				\
+	/boot					\
+	/etc					\
+	/usr/lib/locale				\
+	/var/backups				\
+	/var/cache/apt				\
+	/var/cache/debconf			\
+	/var/cache/fontconfig			\
+	/var/cache/fonts			\
+	/var/cache/ldconfig			\
+	/var/cache/anthy			\
+	/var/lib/apt				\
+	/var/lib/dpkg				\
+	/var/lib/belocs				\
+	/var/lib/gconf				\
+	/var/lib/defoma				\
+	/var/lib/locales			\
+	/var/log/installer			"
+
+  NINER_NINER_SYMLINKS="			\
+	/initrd.img				\
+	/vmlinuz				\
+	/cdrom					\
+	/media/cdrom				\
+	/etc/alternatives			\
+	/usr/share/fonts			\
+	/var/lib/anthy				\
+	/var/lib/defoma				"
+
+  find -L $NINER_NINER_PATHS -gid 999 -print0 |
+	xargs -0rt chgrp -h 0 || true
+  find $NINER_NINER_SYMLINKS -gid 999 -print0 |
+	xargs -0rt chgrp -h 0 || true
+  find /media -maxdepth 1 -name "cdrom[0-9]*" -gid 999 -print0 |
+	xargs -0rt chgrp -h 0 || true
+fi
+
 if [ -f /var/lib/dpkg/info/base.list ]; then
   :> /var/lib/dpkg/info/base.list
   rm -f /var/lib/dpkg/info/base.conffiles

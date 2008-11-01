@@ -1,3 +1,9 @@
+base-files (4.0.4ubuntu2.2-0blankon1) meuligoe-security; urgency=low
+
+  * Perbaharui versi mengikuti upstream. Berdasar info dari irgsh.
+
+ -- MSulchan Darmawan <bleketux@gmail.com>  Sat, 01 Nov 2008 09:53:54 +0700
+
 base-files (4.0.4ubuntu2-0blankon1) meuligoe; urgency=low
 
   * Perbaharui versi mengikuti upstream terbaru. Namun perubahan pada
