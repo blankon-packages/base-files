@@ -1,3 +1,9 @@
+base-files (4.0.4ubuntu2.2-1blankon1) meuligoe; urgency=low
+
+  * Hapus "development branch" dari etc/{issue,issue.net,lsb-release}
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Wed, 12 Nov 2008 18:12:22 +0100
+
 base-files (4.0.4ubuntu2.2-0blankon1) meuligoe; urgency=low
 
   * Perbaharui versi mengikuti upstream. Berdasar info dari irgsh.
