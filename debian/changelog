@@ -1,4 +1,4 @@
-base-files (4.0.4ubuntu2.2-1blankon2) meuligoe; urgency=low
+base-files (4.0.4ubuntu2.2-1blankon2) meuligoe-security; urgency=low
 
   * Perbaiki isi etc/{issue,issue.net,lsb-release} (tiket #178)
 
