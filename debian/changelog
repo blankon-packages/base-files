@@ -1,3 +1,9 @@
+base-files (4.0.4ubuntu2.2-1blankon2) meuligoe; urgency=low
+
+  * Perbaiki isi etc/{issue,issue.net,lsb-release} (tiket #178)
+
+ -- Fajran Iman Rusadi <fajran@gmail.com>  Mon, 17 Nov 2008 11:38:16 +0100
+
 base-files (4.0.4ubuntu2.2-1blankon1) meuligoe; urgency=low
 
   * Hapus "development branch" dari etc/{issue,issue.net,lsb-release}
