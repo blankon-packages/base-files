@@ -1,3 +1,112 @@
+base-files (5ubuntu1) jaunty; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Restore order line in /etc/host.conf with a comment.
+    - Add default /etc/networks file.
+    - Implement LSB-3.1, 16.2 (/etc/profile.d).
+    - Added information about the docs web page.
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Change permissions of kernels copied from the Live CD by Ubiquity
+      1.9.4 thru 1.10.9.
+    - Correct group ownership of files changed by Ubiquity 1.7.5 thru
+      1.10.9.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 23 Dec 2008 18:55:10 +0000
+
+base-files (5) unstable; urgency=low
+
+  * Changed issue, issue.net and debian_version to read "5.0".
+  * Changed FAQ so that users of lenny as stable will know what happens
+    when they upgrade to the new testing.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 04 Dec 2008 10:04:04 +0100
+
+base-files (4.0.6ubuntu1) jaunty; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Restore order line in /etc/host.conf with a comment.
+    - Add default /etc/networks file.
+    - Implement LSB-3.1, 16.2 (/etc/profile.d).
+    - Added information about the docs web page.
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Change permissions of kernels copied from the Live CD by Ubiquity
+      1.9.4 thru 1.10.9.
+    - Correct group ownership of files changed by Ubiquity 1.7.5 thru
+      1.10.9.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 10 Nov 2008 12:00:09 +0000
+
+base-files (4.0.6) unstable; urgency=low
+
+  * Changed the way wtmp, btmp and lastlog are handled. They are no longer
+    recreated at every base-files upgrade. Instead, they are only created
+    once, when base-files is installed by debootstrap. It is really not
+    base-files business to fiddle with those files, as it is documented
+    that removing them is the standard way to disable logging to them.
+    Closes: #488376.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 04 Nov 2008 20:34:12 +0100
+
+base-files (4.0.5ubuntu2) jaunty; urgency=low
+
+  * Correct copy-and-paste mistake in previous changelog.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 31 Oct 2008 13:30:43 +0000
+
+base-files (4.0.5ubuntu1) jaunty; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Restore order line in /etc/host.conf with a comment.
+    - Add default /etc/networks file.
+    - Implement LSB-3.1, 16.2 (/etc/profile.d).
+    - Added information about the docs web page.
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Change permissions of kernels copied from the Live CD by Ubiquity
+      1.9.4 thru 1.10.9.
+    - Correct group ownership of files changed by Ubiquity 1.7.5 thru
+      1.10.9.
+  * /etc/issue, /etc/issue.net, /etc/lsb-release: Welcome to Jaunty!
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 31 Oct 2008 13:17:58 +0000
+
+base-files (4.0.5) unstable; urgency=low
+
+  * Changed awk from Depends to Pre-Depends. Closes: #314571, #469552.
+    This is required to make the awk virtual package to be truly essential,
+    as only essential packages, their predependencies, and the dependencies
+    of their predependencies are guaranteed to be "working at all times".
+    Previously, the packaging system was allowed to remove an awk flavour
+    and install another one in the middle of an upgrade, which may break
+    packages using awk in their preinsts (and in fact, it happened).
+    Tkanks a lot to Steve Langasek for clarifying this issue.
+  * It's still soon to change /etc/debian_version. Please be patient.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue,  5 Aug 2008 18:06:06 +0200
+
 base-files (4.0.4ubuntu2.2) intrepid-security; urgency=low
 
   * Ubiquity cleanup: do not fail on missing symlink targets.
@@ -1267,4 +1376,3 @@ base-files (1.2.0-1) unstable; urgency=low
     /etc/passwd and /etc/group are installed by the "base-passwd" package.
 
  -- Bruce Perens <bruce@pixar.com>  Thu, 14 Nov 1996 21:02:09 -0800
-

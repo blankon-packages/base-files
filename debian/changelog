@@ -1,3 +1,10 @@
+base-files (5ubuntu1+0blankon1) nanggar; urgency=low
+
+  * Perubahan nama nanggar
+  * Perubahan etc/issue issue.net lsb-release
+
+ -- MSulchan Darmawan <bleketux@gmail.com>  Mon, 19 Jan 2009 09:25:38 +0700
+
 base-files (4.0.4ubuntu2.2-1blankon2) meuligoe-security; urgency=low
 
   * Perbaiki isi etc/{issue,issue.net,lsb-release} (tiket #178)
