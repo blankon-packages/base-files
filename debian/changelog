@@ -1,3 +1,9 @@
+base-files (5ubuntu1+blankon1) nanggar; urgency=low
+
+  * Perubahan versioning menjadi 5ubuntu1+blankon1 
+
+ -- MSulchan Darmawan <bleketux@gmail.com>  Fri, 23 Jan 2009 09:47:21 +0700
+
 base-files (5ubuntu1+0blankon1) nanggar; urgency=low
 
   * Perubahan nama nanggar
