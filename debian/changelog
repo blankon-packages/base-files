@@ -1,3 +1,9 @@
+base-files (5ubuntu2+blankon1) nanggar ; urgency=low
+
+  * Sync baru
+
+ -- MSulchan Darmawan <bleketux@gmail.com>  Thu, 12 Feb 2009 12:09:09 +0700
+
 base-files (5ubuntu1+blankon1) nanggar; urgency=low
 
   * Perubahan versioning menjadi 5ubuntu1+blankon1 

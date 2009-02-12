@@ -1,3 +1,10 @@
+base-files (5ubuntu2) jaunty; urgency=low
+
+  * debian/{700-dirs,rules}: ship /root mode 700 by default (debian
+    bug 514794).
+
+ -- Kees Cook <kees@ubuntu.com>  Tue, 10 Feb 2009 13:55:51 -0800
+
 base-files (5ubuntu1) jaunty; urgency=low
 
   * Resynchronise with Debian. Remaining changes:
