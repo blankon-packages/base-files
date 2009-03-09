@@ -1,3 +1,10 @@
+base-files (5ubuntu3) jaunty; urgency=low
+
+  * debian/postinst: Drop seeding of /etc/adjtime after discussion with
+    the Debian maintainer.
+
+ -- Scott James Remnant <scott@ubuntu.com>  Thu, 05 Mar 2009 17:34:15 +0000
+
 base-files (5ubuntu2) jaunty; urgency=low
 
   * debian/{700-dirs,rules}: ship /root mode 700 by default (debian

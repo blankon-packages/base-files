@@ -1,3 +1,9 @@
+base-files (5ubuntu3+blankon1) nanggar; urgency=low
+
+  * Sync Baru
+
+ -- MSulchan Darmawan <bleketux@gmail.com>  Mon, 09 Mar 2009 09:36:02 +0700
+
 base-files (5ubuntu2+blankon1) nanggar; urgency=low
 
   * Sync baru
