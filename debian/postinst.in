@@ -30,6 +30,12 @@ preserve_directory() {
   fi
 }
 
+if [ ! -e /etc/dpkg/origins/default ]; then
+  if [ -e /etc/dpkg/origins/#VENDORFILE# ]; then
+    ln -sf #VENDORFILE# /etc/dpkg/origins/default
+  fi
+fi
+
 if [ "$1" = "configure" ] && [ "$2" = "" ]; then
   install_from_default /usr/share/base-files/nsswitch.conf /etc/nsswitch.conf
   install_from_default /usr/share/base-files/dot.profile   /root/.profile
@@ -192,17 +198,4 @@ then
 	xargs -0rt chgrp -h 0 || true
   find /media -maxdepth 1 -name "cdrom[0-9]*" -gid 999 -print0 |
 	xargs -0rt chgrp -h 0 || true
-fi
-
-if [ -f /var/lib/dpkg/info/base.list ]; then
-  :> /var/lib/dpkg/info/base.list
-  rm -f /var/lib/dpkg/info/base.conffiles
-  echo
-  echo "Note: You have the old \`base' package installed"
-  echo "It is very important that you do not try to remove this package"
-  echo "using dpkg. Please read /usr/share/doc/base-files/README.base to"
-  echo "get rid of the \`base' package completely in a safe way."
-  echo
-  echo -n "Press <Return> to continue "
-  read dummy
 fi

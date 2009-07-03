@@ -1,5 +1,95 @@
+base-files (5.0.0ubuntu2) karmic; urgency=low
+
+  * Add "Parent: Debian" to /etc/dpkg/origins/ubuntu, which will be useful
+    with the dpkg-vendor program in dpkg 1.15.1.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 11 May 2009 16:32:12 +0100
+
+base-files (5.0.0ubuntu1) karmic; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Restore order line in /etc/host.conf with a comment.
+    - Add default /etc/networks file.
+    - Implement LSB-3.1, 16.2 (/etc/profile.d).
+    - Added information about the docs web page.
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Change permissions of kernels copied from the Live CD by Ubiquity
+      1.9.4 thru 1.10.9.
+    - Correct group ownership of files changed by Ubiquity 1.7.5 thru
+      1.10.9.
+    - Ship /root mode 700 by default.
+  * Add /etc/dpkg/origins/ubuntu, and point the default symlink to that.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 27 Apr 2009 10:57:55 +0100
+
+base-files (5.0.0) unstable; urgency=low
+
+  * Drop README.base, remove-base, and the lines in postinst which checked
+    for the old base package being present.
+  * Do not fiddle with /etc/adjtime anymore, as it does not belong here.
+  * Added file /etc/dpkg/origins/debian from dpkg package, for the benefit
+    of Debian-derived distributions, as base-files is trivial to fork.
+    Hopefully, this will be one less reason to fork dpkg. Closes: #487437.
+  * Added dpkg (<= 1.15.0) to Replaces, because of the above.
+  * On initial install and also on upgrades, create /etc/dpkg/origins/default
+    as a symlink to /etc/dpkg/origins/debian, if it does not exist.
+  * Updated copyright year in copyright file.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 24 Apr 2009 21:02:42 +0200
+
+base-files (5.0ubuntu1) karmic; urgency=low
+
+  * Resynchronise with Debian. Remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Restore order line in /etc/host.conf with a comment.
+    - Add default /etc/networks file.
+    - Implement LSB-3.1, 16.2 (/etc/profile.d).
+    - Added information about the docs web page.
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Change permissions of kernels copied from the Live CD by Ubiquity
+      1.9.4 thru 1.10.9.
+    - Correct group ownership of files changed by Ubiquity 1.7.5 thru
+      1.10.9.
+    - Ship /root mode 700 by default.
+    - Drop seeding of /etc/adjtime.
+  * /etc/issue, /etc/issue.net, /etc/lsb-release: Welcome to Karmic!
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Fri, 24 Apr 2009 13:48:26 +0100
+
+base-files (5.0) unstable; urgency=medium
+
+  * Changed issue, issue.net and debian_version to read "squeeze/sid".
+  * Added GFDL-1.3 from http://www.gnu.org/licenses/fdl-1.3.txt as new
+    packages in unstable are starting to use it. Closes: #517196.
+  * Updated generic GFDL symlink accordingly, as it is always supposed
+    to point to the latest version.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 26 Feb 2009 17:09:38 +0100
+
+base-files (5ubuntu4) jaunty; urgency=low
+
+  * Prepare for Jaunty release: etc/{lsb-release,issue,issue.net}.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Mon, 13 Apr 2009 09:26:01 +0000
+
 base-files (5ubuntu3) jaunty; urgency=low
 
+  [ Scott James Remnant ]
   * debian/postinst: Drop seeding of /etc/adjtime after discussion with
     the Debian maintainer.
 

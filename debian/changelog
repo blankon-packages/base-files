@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu2+blankon1) ombilin; urgency=low
+
+  * upstream update
+
+ -- Mahyuddin Susanto <udienz@ubuntu.com>  Sat, 04 Jul 2009 01:11:12 +0700
+
 base-files (5ubuntu3+blankon1) nanggar; urgency=low
 
   * Sync Baru
