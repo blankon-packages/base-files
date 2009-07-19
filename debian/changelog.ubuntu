@@ -1,3 +1,39 @@
+base-files (5.0.0ubuntu6) karmic; urgency=low
+
+  * etc/00-header, debian/directory-list, debian/rules: pam_motd will
+    now dynamically build a MOTD by running all scripts in
+    /etc/update-motd.d and concatenating the output; seed that MOTD
+    with the standard header, LP: #399071
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 13 Jul 2009 21:30:55 -0500
+
+base-files (5.0.0ubuntu5) karmic; urgency=low
+
+  * etc/legal.sh: dropped, as the display of /etc/legal is now
+    handled by update-motd
+  * etc/legal: keep this text here, though, as this seems to be
+    the most appropriate, maintainable place for it
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 13 Jul 2009 14:18:45 -0500
+
+base-files (5.0.0ubuntu4) karmic; urgency=low
+
+  * etc/legal.sh: per feedback from pitti, the flag was moved to
+    ~/.cache/motd/legal-displayed
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 09 Jul 2009 14:34:14 -0500
+
+base-files (5.0.0ubuntu3) karmic; urgency=low
+
+  * etc/motd, etc/legal.sh, debian/rules, share/motd.md5sums: pursuant to
+    consultation with Canonical's Legal Department, it is sufficient
+    to display the warranty disclaimer only once per user; move this
+    text out of the stock /etc/motd, and into an /etc/profile.d/legal.sh
+    script; display the text if a certain flag is not detected and touch
+    the flag file
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 08 Jul 2009 16:55:12 -0500
+
 base-files (5.0.0ubuntu2) karmic; urgency=low
 
   * Add "Parent: Debian" to /etc/dpkg/origins/ubuntu, which will be useful

@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu6+blankon1) karmic; urgency=low
+
+  * upstream updates
+
+ -- Mahyuddin Susanto <udienz@ubuntu.com>  Sun, 19 Jul 2009 17:54:08 +0700
+
 base-files (5.0.0ubuntu2+blankon1) ombilin; urgency=low
 
   * upstream update
