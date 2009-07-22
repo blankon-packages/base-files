@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu6+blankon2) ombilin; urgency=low
+
+  * added etc/00-header
+
+ -- Mahyuddin Susanto <udienz@ubuntu.com>  Thu, 23 Jul 2009 02:44:06 +0700
+
 base-files (5.0.0ubuntu6+blankon1) ombilin; urgency=low
 
   * upstream updates

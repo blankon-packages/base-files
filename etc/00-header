@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Header for /etc/motd
+# These two lines were taken from /etc/init.d/bootlogs.sh
+uname -snrvm
+[ -f /etc/motd.tail ] && cat /etc/motd.tail
