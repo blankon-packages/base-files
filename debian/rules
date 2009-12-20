@@ -53,6 +53,7 @@ binary-arch: build
 	install -p -m 644 etc/* debian/tmp/etc
 	install -p -m 644 etc/legal debian/tmp/etc
 	install -p -m 755 etc/00-header debian/tmp/etc/update-motd.d
+	install -p -m 755 etc/10-help-text debian/tmp/etc/update-motd.d
 	rm -f debian/tmp/etc/motd
 ifeq ($(DEB_HOST_GNU_SYSTEM),gnu)
 	rmdir debian/tmp/proc

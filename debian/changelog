@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu10+blankon1) ombilin; urgency=low
+
+  * New upstream updates
+
+ -- Akhmat Safrudin <akhmat@airputih.or.id>  Sun, 20 Dec 2009 13:40:03 +0000
+
 base-files (5.0.0ubuntu6+blankon2) ombilin; urgency=low
 
   * added etc/00-header
