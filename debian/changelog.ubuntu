@@ -1,3 +1,27 @@
+base-files (5.0.0ubuntu13) lucid; urgency=low
+
+  * debian/10-help-text: fix url, no https for server doc
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 25 Mar 2010 11:08:56 -0700
+
+base-files (5.0.0ubuntu12) lucid; urgency=low
+
+  * debian/10-help-text: line up the help text, make it more concise and
+    consistent with the other help-text update-motd insertions from other
+    packages
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 25 Mar 2010 11:06:52 -0700
+
+base-files (5.0.0ubuntu11) lucid; urgency=low
+
+  * share/dot.bashrc: Sync with bash's skeleton bashrc, just don't
+    enable command completion by default.
+    - Uncomment useful aliases for ll, la, and l, to better match sysadmin's
+      expectations coming from other enterprise distros (Dustin Kirkland).
+      LP: #545262.
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 25 Mar 2010 14:19:44 +0100
+
 base-files (5.0.0ubuntu10) lucid; urgency=low
 
   * etc/00-header: handle non-zero exit if /etc/motd.tail does not exist,

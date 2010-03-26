@@ -2,10 +2,10 @@
 
 if uname -r | grep -qs "\-server"; then
 	echo
-	echo "For documentation and useful resources, please visit:"
-	echo " * http://ubuntu.com/server/doc"
+	echo "Welcome to the Ubuntu Server!"
+	echo " * Documentation:  http://www.ubuntu.com/server/doc"
 else
 	echo
-	echo "For official documentation, please visit:"
-	echo " * http://www.blankonlinux.or.id/"
+	echo "Welcome to Ubuntu!"
+	echo " * Documentation:  https://help.ubuntu.com/"
 fi
