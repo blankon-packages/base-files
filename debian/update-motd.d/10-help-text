@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if uname -r | grep -qs "\-server"; then
+	echo
+	echo "Welcome to the BlankOn Server!"
+	echo " * Documentation:  http://www.blankonlinux.or.id/"
+else
+	echo
+	echo "Welcome to BlankOn!"
+	echo " * Documentation:  http://www.blankonlinux.or.id/"
+fi

@@ -11,7 +11,7 @@ ifeq ($(DEB_HOST_GNU_SYSTEM),gnu)
   OSNAME=GNU/Hurd
 endif
 
-VENDORFILE = blankon
+VENDORFILE = ubuntu
 
 VERSION = $(shell cat etc/debian_version)
 
@@ -51,9 +51,7 @@ binary-arch: build
 	ln -s LGPL-3 debian/tmp/usr/share/common-licenses/LGPL
 	ln -s GPL-3 debian/tmp/usr/share/common-licenses/GPL
 	install -p -m 644 etc/* debian/tmp/etc
-	install -p -m 644 etc/legal debian/tmp/etc
-	install -p -m 755 etc/00-header debian/tmp/etc/update-motd.d
-	install -p -m 755 etc/10-help-text debian/tmp/etc/update-motd.d
+	install -p -m 755 debian/update-motd.d/* debian/tmp/etc/update-motd.d
 	rm -f debian/tmp/etc/motd
 ifeq ($(DEB_HOST_GNU_SYSTEM),gnu)
 	rmdir debian/tmp/proc
