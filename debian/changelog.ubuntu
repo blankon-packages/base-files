@@ -1,3 +1,11 @@
+base-files (5.0.0ubuntu15) lucid; urgency=low
+
+  * debian/links, debian/postinst.in, debian/rules:
+    remove artifacts of old base motd creation, keep duplicated data
+    from popping up in motd, LP: #516293
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Fri, 09 Apr 2010 14:23:01 -0500
+
 base-files (5.0.0ubuntu14) lucid; urgency=low
 
   Fix double-printing of motd.tail, LP: #550561

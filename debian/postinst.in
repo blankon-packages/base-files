@@ -41,7 +41,6 @@ if [ "$1" = "configure" ] && [ "$2" = "" ]; then
   install_from_default /usr/share/base-files/dot.profile   /root/.profile
   install_from_default /usr/share/base-files/dot.bashrc    /root/.bashrc
   install_from_default /usr/share/base-files/profile       /etc/profile
-  install_from_default /usr/share/base-files/motd          /etc/motd
   install_from_default /usr/share/base-files/networks      /etc/networks
   install_directory srv       755 root
   install_directory opt       755 root
@@ -125,6 +124,8 @@ if [ "$1" = "configure" ] && [ "$2" != "" ]; then
       # rather, the sysadmin can use motd.tail to append
       # text to the pam_motd dynamically generated motd
       mv -f /etc/motd.tail /etc/motd.tail.old
+      # Clear out old MOTD, will be regenerated on next login
+      rm -f /var/run/motd
     fi
   fi
 
