@@ -117,6 +117,12 @@ if [ ! -f /usr/info/dir ] && [ ! -f /usr/share/info/dir ]; then
 fi
 rm -f /etc/base-files.mailsymlink
 
+if dpkg --compare-versions "$2" lt 5.0.0ubuntu17 && [ ! -e "/etc/motd" ]; then
+  # Create symlink on installation (or versioned upgrade);
+  # thereafter, the admin is free to modify accordingly
+  ln -sf /var/run/motd /etc/motd
+fi
+
 if [ "$1" = "configure" ] && [ "$2" != "" ]; then
   if [ -f /etc/motd.tail ]; then
     if dpkg --compare-versions "$2" lt-nl 5.0.0ubuntu13; then
@@ -127,6 +133,13 @@ if [ "$1" = "configure" ] && [ "$2" != "" ]; then
       # Clear out old MOTD, will be regenerated on next login
       rm -f /var/run/motd
     fi
+  fi
+  # If we're upgrading base-files, remove the upgrade-available flag
+  # maintained by update-manager, and rerun the release-upgrade check
+  # immediately (in the background) to update the flag.
+  rm -f /var/lib/update-notifier/release-upgrade-available
+  if [ -x /usr/lib/update-manager/check-new-release ]; then
+    /usr/lib/update-manager/check-new-release -q > /var/lib/update-notifier/release-upgrade-available  &
   fi
 
   if [ -f /etc/profile ]; then

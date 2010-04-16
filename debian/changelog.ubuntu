@@ -1,3 +1,25 @@
+base-files (5.0.0ubuntu18) lucid; urgency=low
+
+  * debian/postinst.in: clear release-upgrade flag, and update again
+    immediately on base-files upgrades, LP: #563015
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Wed, 14 Apr 2010 09:25:15 -0500
+
+base-files (5.0.0ubuntu17) lucid; urgency=low
+
+  * debian/rules, debian/postinst.in: second half of the fix for the
+    previous upload; drop symlink creation in debian/rules, LP: #561778
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 12 Apr 2010 18:23:39 -0500
+
+base-files (5.0.0ubuntu16) lucid; urgency=low
+
+  * debian/postinst.in: only create /etc/motd link on initial install;
+    thereafter, it's entirely up to the admin whether to keep this
+    link or modify it to their wishes, LP: #561778
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Mon, 12 Apr 2010 15:23:12 -0500
+
 base-files (5.0.0ubuntu15) lucid; urgency=low
 
   * debian/links, debian/postinst.in, debian/rules:
