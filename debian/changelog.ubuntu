@@ -1,3 +1,15 @@
+base-files (5.0.0ubuntu20) lucid; urgency=low
+
+  * 00-header: use lsb_release -s -d so LTS is displayed LP: #568628
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 22 Apr 2010 12:12:29 -0700
+
+base-files (5.0.0ubuntu19) lucid; urgency=low
+
+  * Prepare for Lucid release: etc/{lsb-release,issue,issue.net}.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Tue, 20 Apr 2010 03:50:12 -0700
+
 base-files (5.0.0ubuntu18) lucid; urgency=low
 
   * debian/postinst.in: clear release-upgrade flag, and update again
