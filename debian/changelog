@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu20+blankon3) ombilin; urgency=low
+
+  * rebuild
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 22 Jun 2010 00:49:30 +0000
+
 base-files (5.0.0ubuntu20+blankon2) ombilin; urgency=low
 
   * Update ke rilis paripurna
