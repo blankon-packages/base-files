@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu25+blankon1) pattimura; urgency=low
+
+  * release for pattimura
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 21 Nov 2010 15:43:49 +0700
+
 base-files (5.0.0ubuntu20+blankon3) ombilin; urgency=low
 
   * rebuild

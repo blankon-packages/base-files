@@ -117,6 +117,9 @@ if [ ! -f /usr/info/dir ] && [ ! -f /usr/share/info/dir ]; then
 fi
 rm -f /etc/base-files.mailsymlink
 
+# Establish a fresh MOTD on package upgrade, ensures that the symlink is not broken
+[ -d "/etc/update-motd.d" ] && run-parts --lsbsysinit /etc/update-motd.d > /var/run/motd
+
 if dpkg --compare-versions "$2" lt 5.0.0ubuntu17 && [ ! -e "/etc/motd" ]; then
   # Create symlink on installation (or versioned upgrade);
   # thereafter, the admin is free to modify accordingly
@@ -200,4 +203,15 @@ then
 	xargs -0rt chgrp -h 0 || true
   find /media -maxdepth 1 -name "cdrom[0-9]*" -gid 999 -print0 |
 	xargs -0rt chgrp -h 0 || true
+fi
+
+# Dell Latitude 2110 factory pre-installed images carried a leftover apt
+# configuration snippet which disables apt's enforcing of authenticated
+# packages.
+if dpkg --compare-versions "$2" le-nl "5.0.0ubuntu22" &&
+    [ -e /etc/apt/apt.conf.d/00secure ]; then
+    md5=`md5sum /etc/apt/apt.conf.d/00secure | cut -f 1 -d\ `
+    if [ "$md5" = da402e2c3a805e234ae7d20fa55580a6 ]; then
+	rm /etc/apt/apt.conf.d/00secure
+    fi
 fi

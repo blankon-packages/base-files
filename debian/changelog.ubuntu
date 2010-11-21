@@ -1,3 +1,44 @@
+base-files (5.0.0ubuntu25) natty; urgency=low
+
+  * debian/update-motd.d/00-header, debian/update-motd.d/10-help-text,
+    debian/update-motd.d/99-footer:
+    - add copyright/license header
+    - simplify/shorten text, LP: #578264
+    - speed up boot by having 00-header source /etc/lsb-release, if possible,
+      and only using lsb_release as a fall back, LP: #617410, #664492
+  * debian/postinst.in: ensure that /var/run/motd is populated on package
+    install/upgrade, LP: #614486
+
+ -- Dustin Kirkland <kirkland@ubuntu.com>  Thu, 21 Oct 2010 08:43:01 -0500
+
+base-files (5.0.0ubuntu24) natty; urgency=low
+
+  * /etc/issue, /etc/issue.net, /etc/lsb-release: Welcome to Natty!
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Mon, 11 Oct 2010 15:35:43 +0100
+
+base-files (5.0.0ubuntu23) maverick; urgency=low
+
+  * Prepare for Maverick release: etc/{lsb-release,issue,issue.net}.
+
+ -- Thierry Carrez (ttx) <thierry.carrez@ubuntu.com>  Thu, 07 Oct 2010 09:47:59 +0100
+
+base-files (5.0.0ubuntu22) maverick; urgency=low
+
+  * debian/postinst.in: A bug in the build process for the Dell Latitude 2110
+    factory pre-installed OEM images caused a temporary apt configuration file
+    to be left in the installed system. This disabled apt's enforcement of
+    authenticated packages. Remove the file on upgrades if it matches the
+    factory version. (LP: #610647)
+
+ -- Martin Pitt <martin.pitt@ubuntu.com>  Wed, 28 Jul 2010 18:46:45 +0200
+
+base-files (5.0.0ubuntu21) maverick; urgency=low
+
+  * /etc/issue, /etc/issue.net, /etc/lsb-release: Welcome to Maverick!
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Tue, 04 May 2010 17:42:31 +0100
+
 base-files (5.0.0ubuntu20) lucid; urgency=low
 
   * 00-header: use lsb_release -s -d so LTS is displayed LP: #568628
