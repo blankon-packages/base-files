@@ -1,6 +1,12 @@
+base-files (5.0.0ubuntu26+blankon1) pattimura; urgency=low
+
+  * New upstream updates
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 27 Jan 2011 19:16:44 +0700
+
 base-files (5.0.0ubuntu25+blankon2) pattimura; urgency=low
 
-  * dbian/rules vendor to blankon
+  * debian/rules vendor to blankon
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 21 Nov 2010 15:57:13 +0700
 

@@ -118,7 +118,7 @@ fi
 rm -f /etc/base-files.mailsymlink
 
 # Establish a fresh MOTD on package upgrade, ensures that the symlink is not broken
-[ -d "/etc/update-motd.d" ] && run-parts --lsbsysinit /etc/update-motd.d > /var/run/motd
+[ -d "/etc/update-motd.d" ] && run-parts --lsbsysinit /etc/update-motd.d > /var/run/motd || true
 
 if dpkg --compare-versions "$2" lt 5.0.0ubuntu17 && [ ! -e "/etc/motd" ]; then
   # Create symlink on installation (or versioned upgrade);

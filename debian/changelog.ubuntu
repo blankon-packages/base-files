@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu26) natty; urgency=low
+
+  * Ignore errors from update-motd (LP: #682843).
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 02 Dec 2010 17:43:30 +0000
+
 base-files (5.0.0ubuntu25) natty; urgency=low
 
   * debian/update-motd.d/00-header, debian/update-motd.d/10-help-text,
