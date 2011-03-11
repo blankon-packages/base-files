@@ -1,3 +1,10 @@
+base-files (5.0.0ubuntu27+blankon2) pattimura; urgency=low
+
+  * etc/lsb-release = DISTRIB_CODENAME.
+    - Pattimura to pattimura 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 11 Mar 2011 13:16:50 +0700
+
 base-files (5.0.0ubuntu27+blankon1) pattimura; urgency=low
 
   * New upstream updates.
