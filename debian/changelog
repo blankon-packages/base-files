@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu28+blankon1) pattimura; urgency=low
+
+  * New uptream updates.
+  
+ -- aftian <aftian@di.blankon.in>  Sat, 23 Apr 2011 07:35:06 +0700
+
 base-files (5.0.0ubuntu27+blankon2) pattimura; urgency=low
 
   * etc/lsb-release = DISTRIB_CODENAME.

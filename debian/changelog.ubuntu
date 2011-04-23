@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu28) natty; urgency=low
+
+  * /etc/issue, /etc/issue.net, /etc/lsb-release: Prepare for Natty release.
+
+ -- Colin Watson <email address hidden>   Thu, 21 Apr 2011 17:20:37 +0100
+
 base-files (5.0.0ubuntu26) natty; urgency=low
 
   * Ignore errors from update-motd (LP: #682843).
