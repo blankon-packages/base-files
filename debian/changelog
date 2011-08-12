@@ -1,3 +1,10 @@
+base-files (5.0.0ubuntu28+blankon2) pattimura; urgency=low
+
+  * Release Final
+   - etc/lsb-release
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 12 Aug 2011 22:45:14 +0700
+
 base-files (5.0.0ubuntu28+blankon1) pattimura; urgency=low
 
   * New uptream updates.
