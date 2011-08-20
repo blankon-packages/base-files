@@ -1,3 +1,9 @@
+base-files (5.0.0ubuntu28+blankon3) pattimura-updates; urgency=low
+
+  * /etc/issue
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 20 Aug 2011 21:07:40 +0700
+
 base-files (5.0.0ubuntu28+blankon2) pattimura; urgency=low
 
   * Release Final
