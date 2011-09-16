@@ -1,41 +1,13 @@
 Frequently Asked Questions about base-files
 ===========================================
 
-* Questions about "profile.d":
-
-Q. Why does Debian not have a "profile.d" directory, like other distributions?
-
-A. Because no Debian package needs it. Debian policy says: "A program
-must not depend on environment variables to get reasonable defaults".
-This policy has been very successful so far. If the default install
-had a profile.d, people might think it's ok to use it for a Debian
-package, when in fact policy does not support such thing.
-
-Q. Ok, but I still think it would still be a nice thing to have, would
-not make sense to have a profile.d by default, even if no Debian
-package uses it?
-
-A. No. As explained before, there is the risk of assuming that it's
-"officially supported". If you need a profile.d directory, you may
-still create one in your machine and modify your /etc/profile
-accordingly to enable it. Since this is a configuration file,
-its contents will be preserved in upgrades.
-
-Q. Ok, but if I do that I will have to merge my changes every time
-the /etc/profile provided by base-files changes.
-
-A. That should not be a big problem. The default /etc/profile provided
-by base-files is quite minimal on purpose, and it is not expected to
-change drastically from one Debian release to the next one.
-
-
 * Questions about /etc/issue and /etc/debian_version:
 
 Q. I upgraded my system to the testing distribution and now my /etc/issue
-says "squeeze/sid". Should it not read "squeeze" or "testing"?
+says "wheezy/sid". Should it not read "wheezy" or "testing"?
 
 Q. I upgraded my system to the unstable distribution and now my /etc/issue
-says "squeeze/sid". Should it not read "sid" or "unstable"?
+says "wheezy/sid". Should it not read "sid" or "unstable"?
 
 A. You obviously do not understand how the testing distribution works.
 Packages uploaded for unstable reach testing after ten days, provided
@@ -44,10 +16,10 @@ their dependencies may be met in testing. You should consider the
 testing and unstable distributions as two sides of the same coin.
 Since the base-files package in testing was initially uploaded for
 unstable, the only sensible /etc/issue to have is one that is both
-valid for testing and unstable, hence "squeeze/sid" (or whatever is
+valid for testing and unstable, hence "wheezy/sid" (or whatever is
 appropriate).
 
-Q. Why "squeeze/sid" and not "testing/unstable" as usual?
+Q. Why "wheezy/sid" and not "testing/unstable" as it used to be?
 
 A. The codename is a little bit more informative, as the meaning of
 "testing" changes over time.
@@ -60,6 +32,31 @@ your /etc/apt/sources.list file is probably a much better way.
 
 
 * Other questions:
+
+Q. After upgrading my system recently, I noticed that some files from
+base-files do not match the ones which are installed on a fresh install
+of squeeze. Should I not be warned about that?
+
+A. Those files are configuration files, so they are completely under
+the control of the system admin. The files installed by base-files are
+just defaults. Changes in the default files are not important enough
+to warn the user, as it is also policy that prompting should be
+reduced to a minimum. This is also the reason they are not handled via
+dpkg's conffile mechanism.
+
+In either case, if you want to "upgrade" those files, just look at the
+postinst for base-files (i.e. /var/lib/dpkg/info/base-files.postinst)
+and you will see how they are created and where their master copies are:
+
+  install_from_default /usr/share/base-files/nsswitch.conf /etc/nsswitch.conf
+  install_from_default /usr/share/base-files/dot.profile   /root/.profile
+  install_from_default /usr/share/base-files/dot.bashrc    /root/.bashrc
+  install_from_default /usr/share/base-files/profile       /etc/profile
+  install_from_default /usr/share/base-files/motd          /etc/motd
+
+So, if you want your system to be as similar as possible to a newly
+installed squeeze system, you might want to sync these files manually.
+
 
 Q. Why isn't license "foo" included in common-licenses?
 

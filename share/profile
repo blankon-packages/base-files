@@ -12,9 +12,10 @@ fi
 
 if [ "$PS1" ]; then
   if [ "$BASH" ]; then
-    PS1='\u@\h:\w\$ '
+    # The file bash.bashrc already sets the default PS1.
+    # PS1='\h:\w\$ '
     if [ -f /etc/bash.bashrc ]; then
-	. /etc/bash.bashrc
+      . /etc/bash.bashrc
     fi
   else
     if [ "`id -u`" -eq 0 ]; then
@@ -24,5 +25,3 @@ if [ "$PS1" ]; then
     fi
   fi
 fi
-
-umask 022

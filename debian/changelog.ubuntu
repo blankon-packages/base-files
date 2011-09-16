@@ -1,8 +1,278 @@
+base-files (6.4ubuntu4) oneiric; urgency=low
+
+  * debian/preinst:
+    - fix conffile prompt for unmodified 00-header, 10-help-text 
+      (LP: #820233)
+  * debian/rules:
+    - install the preinst into the package as no helper is used
+
+ -- Michael Vogt <michael.vogt@ubuntu.com>  Wed, 03 Aug 2011 10:44:29 +0200
+
+base-files (6.4ubuntu3) oneiric; urgency=low
+
+  * add update-motd.d files to conffiles (LP: #813282)
+
+ -- Brian Murray <brian@ubuntu.com>  Wed, 20 Jul 2011 16:04:07 -0700
+
+base-files (6.4ubuntu2) oneiric; urgency=low
+
+  * update-motd.d/10-help-text: modify server documentation link to be the
+    official documentation page of the installed distribution.  Thanks to Tim
+    Kuijsten for working on this. (LP: #744253)
+  * rather than depend on lsb-release test to see if lsb_release is available
+    (LP: #575885)
+
+ -- Brian Murray <brian@ubuntu.com>  Thu, 14 Jul 2011 13:29:27 -0700
+
+base-files (6.4ubuntu1) oneiric; urgency=low
+
+  * Merge from Debian unstable, remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Add default /etc/networks file.
+    - Added information about the docs web page.
+    - Restore order line in /etc/host.conf with a comment.
+    - Ship /root mode 700 by default.
+  * Dropped changes:
+    - drop versioned dependency on libpam-modules, satisfied in all versions
+      since hardy (and earlier)
+    - remove /var/lock and /var/run: this is handled differently in Debian,
+      no reason to diverge
+    - fixing up permissions of files copied by ubiquity: transition completed
+      in lucid.
+    - debian/postinst.in: replace references to /var/run with /run: /run is
+      still a draft standard for the time being and should only be used for
+      those parts of the system that were being placed *other* than in
+      /var/run for various reasons (e.g., /dev/.udev, /lib/init/rw).
+      /var/run must continue to exist and be functional, and initscripts
+      guarantees a smooth transition from /var/run to /run once we are ready
+      to start doing away with /var/run (once the FHS officially ratifies
+      /run as its replacement), so there's no reason to diverge from Debian
+      here.
+
+ -- Steve Langasek <steve.langasek@ubuntu.com>  Wed, 13 Jul 2011 13:30:10 -0700
+
+base-files (6.4) unstable; urgency=low
+
+  * Added /run. Closes: #620157.
+  * On new installs:
+    - Create /run/lock (debian-installer will remove it but this will
+    ensure that it exists even on chroot environments).
+    - Symlink /var/run to /run.
+    - Symlink /var/lock to /run/lock.
+  * On upgraded systems, initscripts will handle the transition to /run.
+  * Added "Breaks: initscripts << (2.88dsf-13.3)" to ensure that initscripts
+    is upgraded first, as otherwise udev would break.
+  * Thanks a lot to Roger Leigh.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 27 May 2011 14:25:42 +0200
+
+base-files (6.3ubuntu4) oneiric; urgency=low
+
+  * Removed duplicate code in share/profile, causing /etc/profile.d/*
+    scripts to be executed twice (LP: #790050)
+
+ -- Alexander Fougner <fougner89@gmail.com>  Sat, 18 Jun 2011 00:23:05 +0200
+
+base-files (6.3ubuntu3) oneiric; urgency=low
+
+  * debian/1777-dirs: remove /var/lock (replaced by /run/lock on tmpfs)
+  * debian/directory-list: remove /var/run and /var/lock, add /run
+  * debian/postinst.in: replace references to /var/run with /run
+
+ -- Scott James Remnant <scott@netsplit.com>  Thu, 07 Jul 2011 13:33:06 -0400
+
+base-files (6.3ubuntu2) oneiric; urgency=low
+
+  * Restore /usr/share/base-files/networks.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Wed, 04 May 2011 23:20:17 +0100
+
+base-files (6.3ubuntu1) oneiric; urgency=low
+
+  * Merge with Debian; remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Restore order line in /etc/host.conf with a comment.
+    - Add default /etc/networks file.
+    - Implement LSB-3.1, 16.2 (/etc/profile.d).
+    - Added information about the docs web page.
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Change permissions of kernels copied from the Live CD by Ubiquity
+      1.9.4 thru 1.10.9.
+    - Correct group ownership of files changed by Ubiquity 1.7.5 thru
+      1.10.9.
+    - Ship /root mode 700 by default.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 04 May 2011 10:31:43 +0200
+
+base-files (6.3) unstable; urgency=low
+
+  * Dropped /run until everything else is ready for it. In particular,
+    udev should not blindly assume that it works just because it exists.
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 06 Apr 2011 20:33:02 +0200
+
+base-files (6.2) unstable; urgency=low
+
+  * Added /run. Requested by Roger Leigh. Closes: #620157.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 05 Apr 2011 18:03:36 +0200
+
+base-files (6.1) unstable; urgency=medium
+
+  * Changed issue, issue.net and debian_version to read "wheezy/sid".
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 07 Feb 2011 19:24:00 +0100
+
+base-files (6.0) unstable; urgency=low
+
+  * Changed issue, issue.net and debian_version to read "6.0".
+  * Updated README accordingly.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 14 Dec 2010 22:20:38 +0100
+
+base-files (5.10) unstable; urgency=medium
+
+  * Changed postinst to not reset /var/run/utmp permissions on every upgrade.
+    It is definitely not base-files business to change the permissions of
+    an already existing /var/run/utmp, as the system admin might have
+    changed them on purpose after the file was created. Closes: #601746.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 13 Nov 2010 13:01:12 +0100
+
+base-files (5.9) unstable; urgency=medium
+
+  * Changed /etc/profile so that it defines PATH again. Closes: #571086.
+    We will have plenty of time to discuss about this after the release
+    of squeeze, but for now, this is the safe thing to do.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 06 Aug 2010 19:37:40 +0200
+
+base-files (5.8) unstable; urgency=low
+
+  * Added GPL version 1 from http://ftp.gnu.org/gnu/Licenses/ as there
+    are a lot of packages still using it. Bug #436105.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 05 Jul 2010 19:10:54 +0200
+
+base-files (5.7) unstable; urgency=low
+
+  * Drop umask setting from /etc/profile, will be handled by pam_umask.
+    Closes: #583967.
+
+ -- Santiago Vila <sanvila@debian.org>  Tue, 01 Jun 2010 23:57:52 +0200
+
+base-files (5.6) unstable; urgency=low
+
+  * Ordinary user accounts start at UID 1000 by default, but they also
+    end at 29999 by default. Modified default /etc/profile accordingly.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 20 May 2010 11:34:34 +0200
+
+base-files (5.5) unstable; urgency=low
+
+  * Changed default /etc/profile so that the new umask of 002 is only
+    used for ordinary user accounts, which, according to policy, start
+    at uid 1000 by default.
+
+ -- Santiago Vila <sanvila@debian.org>  Wed, 19 May 2010 18:57:10 +0200
+
+base-files (5.4) unstable; urgency=low
+
+  * Changed umask in default /etc/profile to 002, which has a little bit
+    more sense than 022 on systems like Debian having User Private Groups.
+    As usual for /etc/profile, only new installs will have the new default,
+    so nobody will be surprised by this on upgrades. Hopefully, this change
+    will be documented in the release notes for squeeze as well, for users
+    who install squeeze from scratch. Closes: #248140, #581434.
+  * Refresh GNU licenses from http://ftp.gnu.org/gnu/Licenses/, as they
+    have expanded the embedded tabs. Closes: #572245.
+  * Switch to "3.0 (native)" format.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 13 May 2010 18:35:42 +0200
+
+base-files (5.3) unstable; urgency=low
+
+  * Changed default /etc/profile so that it sources /etc/profile.d/*.sh
+    as mandated by the LSB section 16.2. Closes: #545756.
+    Package maintainers: Please don't use profile.d if you can avoid it,
+    as policy says "A program must not depend on environment variables
+    to get reasonable defaults".
+  * Removed questions about profile.d from FAQ.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 09 Apr 2010 18:07:20 +0200
+
+base-files (5.2) unstable; urgency=low
+
+  * Added question in FAQ to document the fact that some configuration
+    files in /etc are never updated on upgrades. Closes: #571083.
+  * Changed default /usr/src to be root:root and 755. Closes: #573701.
+    The old permissions were of little benefit, and the user can still
+    change this after installing a new system anyway.
+  * Renamed FAQ to README and added a compatibility symlink.
+  * Removed obsolete Depends on base-passwd, as version 2.0.3.4 is more
+    than 10 years old and we don't support upgrades which skip releases.
+  * Dropped preinst completely, as it was there just to support upgrades
+    from very old releases (that we don't support anymore).
+  * Removed postinst code that supports upgrades from very old releases.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 04 Apr 2010 13:22:04 +0200
+
+base-files (5.1) unstable; urgency=low
+
+  * Changed default permissions for /root to 700, as many admins consider
+    it should be more private than other home directories. Closes: #514794.
+  * Changed default permissions for /var/log/btmp to 660, to be in sync
+    with permissions set by logrotate. Closes: #547407.
+  * Do not export PS1 in /root/.bashrc, as it has bash escapes and it's
+    inherited to subshells that do not have to be bash. Closes: #567733.
+  * Added debian_chroot variable to default PS1 in /root/.bashrc.
+  * Comment out PS1 in /root/.bashrc anyway, as /etc/profile and
+    /etc/bash.bashrc already care about it. Closes: #443245.
+  * Comment out umask as well, as it's already in /etc/profile.
+  * Added /usr/local/games to default PATH in /etc/profile. Closes: #487105.
+  * While we are at it, comment out everything about PATH, as /etc/login.defs
+    should already care about this.
+  * Changed default /etc/profile so that it sources /etc/bash.bashrc
+    if the shell is bash. Closes: #275622.
+  * Drop \u part from default PS1 in /etc/profile, as it's only useful
+    for people with several non-root accounts. Most people are either root
+    or an ordinary user, so $ and # are enough to differentiate between them.
+  * Comment out PS1 setting in /etc/profile anyway, as we have bash.bashrc.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 31 Jan 2010 13:16:14 +0100
+
+base-files (5.0.0ubuntu29) oneiric; urgency=low
+
+  * /etc/issue, /etc/issue.net, /etc/lsb-release: Welcome to Oneiric!
+
+ -- Matthias Klose <doko@ubuntu.com>  Thu, 21 Apr 2011 18:58:47 +0200
+
 base-files (5.0.0ubuntu28) natty; urgency=low
 
   * /etc/issue, /etc/issue.net, /etc/lsb-release: Prepare for Natty release.
 
- -- Colin Watson <email address hidden>   Thu, 21 Apr 2011 17:20:37 +0100
+ -- Colin Watson <cjwatson@ubuntu.com>  Thu, 21 Apr 2011 17:20:37 +0100
+
+base-files (5.0.0ubuntu27) natty; urgency=low
+
+  * Capitalize Natty in DISTRIB_DESCRIPTION.
+
+ -- Evan Dandrea <ev@ubuntu.com>  Thu, 24 Feb 2011 11:58:12 +0000
 
 base-files (5.0.0ubuntu26) natty; urgency=low
 

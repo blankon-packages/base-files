@@ -1,3 +1,9 @@
+base-files (6.4ubuntu4+blankon1) rote; urgency=low
+
+  * New Upstream release for rote
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 17 Sep 2011 05:43:33 +0700
+
 base-files (5.0.0ubuntu28+blankon4) pattimura-updates; urgency=low
 
   * /etc/issue.net 

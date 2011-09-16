@@ -23,10 +23,10 @@ install_directory() {
   fi
 }
 
-preserve_directory() {
-  if [ -f /etc/base-files.create-$1 ]; then
-    install_directory $1 755 root
-    rm -f /etc/base-files.create-$1
+migrate_directory() {
+  if [ ! -L $1 ]; then
+    rmdir $1
+    ln -s $2 $1
   fi
 }
 
@@ -51,6 +51,9 @@ if [ "$1" = "configure" ] && [ "$2" = "" ]; then
   if [ ! -L /var/spool/mail ]; then
     ln -s ../mail /var/spool/mail
   fi
+  install_directory run/lock 1777 root
+  migrate_directory /var/run /run
+  migrate_directory /var/lock /run/lock
 
   install_local_dir /usr/local
   install_local_dir /usr/local/share
@@ -74,31 +77,14 @@ if [ "$1" = "configure" ] && [ "$2" = "" ]; then
     echo -n>/var/log/lastlog
   fi
   chown root:utmp /var/log/wtmp /var/log/btmp /var/log/lastlog
-  chmod 664 /var/log/wtmp /var/log/btmp /var/log/lastlog
-fi
-
-if [ "$1" = "configure" ] && [ "$2" != "" ]; then
-  if [ ! -d /var/spool/mail ] && [ ! -L /var/spool/mail ]; then
-    if [ -f /etc/base-files.mailsymlink ]; then
-      ln -sf `cat /etc/base-files.mailsymlink` /var/spool/mail
-    else
-      install_directory var/spool/mail 2775 mail
-    fi
+  chmod 664 /var/log/wtmp /var/log/lastlog
+  chmod 660 /var/log/btmp
+  if [ ! -f /var/run/utmp ]; then
+    echo -n>/var/run/utmp
   fi
-  if [ ! -L /var/mail ] && [ ! -d /var/mail ]; then
-    ln -sf spool/mail /var/mail
-  fi
+  chown root:utmp /var/run/utmp
+  chmod 664 /var/run/utmp
 fi
-
-preserve_directory floppy
-preserve_directory cdrom
-preserve_directory initrd
-
-if [ ! -f /var/run/utmp ]; then
-  echo -n>/var/run/utmp
-fi
-chown root:utmp /var/run/utmp
-chmod 664 /var/run/utmp
 
 if [ ! -d /var/lib/dpkg ]; then
   mkdir -m 755 -p /var/lib/dpkg
@@ -115,7 +101,6 @@ if [ ! -f /usr/info/dir ] && [ ! -f /usr/share/info/dir ]; then
   chmod 644 /usr/share/info/dir
   chown root:root /usr/share/info/dir
 fi
-rm -f /etc/base-files.mailsymlink
 
 # Establish a fresh MOTD on package upgrade, ensures that the symlink is not broken
 [ -d "/etc/update-motd.d" ] && run-parts --lsbsysinit /etc/update-motd.d > /var/run/motd || true
@@ -151,58 +136,6 @@ if [ "$1" = "configure" ] && [ "$2" != "" ]; then
         cp /usr/share/base-files/profile /etc/profile
     fi
   fi
-fi
-
-# Ubiquity 1.9.4 thru 1.10.9 failed to set kernel permissions after
-# copying from the Live CD, leaving the file globally writable.
-if dpkg --compare-versions "$2" le-nl "4.0.4ubuntu2" &&
-   dpkg --compare-versions "$2" ge "4.0.1ubuntu5"
-then
-  find -L /boot -name "vmlinu[zx]-*" -perm /g+w,o+w -print0 |
-	xargs -0rt chmod g-w,o-w || true
-fi
-
-# Ubiquity 1.7.5 thru 1.10.9 failed to restore the group id of
-# the process to root after doing work as the Live CD user, creating
-# files with that user's group as a result.
-if dpkg --compare-versions "$2" le-nl "4.0.4ubuntu2" &&
-   dpkg --compare-versions "$2" ge "4.0.1ubuntu1"
-then
-  NINER_NINER_PATHS="				\
-	/boot					\
-	/etc					\
-	/usr/lib/locale				\
-	/var/backups				\
-	/var/cache/apt				\
-	/var/cache/debconf			\
-	/var/cache/fontconfig			\
-	/var/cache/fonts			\
-	/var/cache/ldconfig			\
-	/var/cache/anthy			\
-	/var/lib/apt				\
-	/var/lib/dpkg				\
-	/var/lib/belocs				\
-	/var/lib/gconf				\
-	/var/lib/defoma				\
-	/var/lib/locales			\
-	/var/log/installer			"
-
-  NINER_NINER_SYMLINKS="			\
-	/initrd.img				\
-	/vmlinuz				\
-	/cdrom					\
-	/media/cdrom				\
-	/etc/alternatives			\
-	/usr/share/fonts			\
-	/var/lib/anthy				\
-	/var/lib/defoma				"
-
-  find -L $NINER_NINER_PATHS -gid 999 -print0 |
-	xargs -0rt chgrp -h 0 || true
-  find $NINER_NINER_SYMLINKS -gid 999 -print0 |
-	xargs -0rt chgrp -h 0 || true
-  find /media -maxdepth 1 -name "cdrom[0-9]*" -gid 999 -print0 |
-	xargs -0rt chgrp -h 0 || true
 fi
 
 # Dell Latitude 2110 factory pre-installed images carried a leftover apt

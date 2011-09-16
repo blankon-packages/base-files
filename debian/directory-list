@@ -3,14 +3,15 @@ boot
 dev
 etc
 etc/default
-etc/skel
 etc/profile.d
+etc/skel
 etc/update-motd.d
 home
 lib
 mnt
 proc
 root
+run
 sbin
 tmp
 usr
