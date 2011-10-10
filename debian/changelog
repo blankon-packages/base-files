@@ -1,3 +1,10 @@
+base-files (6.4ubuntu5+blankon1) rote; urgency=low
+
+  * New upstream release
+  * Merghe whit upstream
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 10 Oct 2011 15:59:42 +0700
+
 base-files (6.4ubuntu4+blankon1) rote; urgency=low
 
   * New Upstream release for rote

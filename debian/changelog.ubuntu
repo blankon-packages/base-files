@@ -1,3 +1,10 @@
+base-files (6.4ubuntu5) oneiric; urgency=low
+
+  * /etc/issue, /etc/issue.net, /etc/lsb-release: Prepare for Oneiric
+    release.
+
+ -- Colin Watson <cjwatson@ubuntu.com>  Sat, 08 Oct 2011 00:45:55 +0100
+
 base-files (6.4ubuntu4) oneiric; urgency=low
 
   * debian/preinst:
