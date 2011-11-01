@@ -1,3 +1,25 @@
+base-files (6.5ubuntu2+blankon1) rote; urgency=low
+
+  * Resynchronise with Debian.  Remaining changes:
+    - Branding changes.
+    - Add /etc/lsb-release file.
+    - Add lsb-release-udeb package.
+    - Record md5sums of unmodified /etc/profile versions so that we can
+      upgrade it automatically.
+    - Various bashrc extensions.
+    - Do not install /usr/local dirs with staff group writeability, as there
+      are cases where somebody can become any user but root (like NFS).
+    - Update the motd upgrade handling to know about /etc/motd.tail.
+    - Add default /etc/networks file.
+    - Added information about the docs web page.
+    - Restore order line in /etc/host.conf with a comment.
+    - Ship /root mode 700 by default.
+    - Add update-motd scripts.
+  * share/profile: Fix incorrect ordering of /etc/profile.d handling vs. PS1
+    check, bringing this more into line with Debian (LP: #881373). 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 01 Nov 2011 17:36:33 +0700
+
 base-files (6.4ubuntu6+blankon1) rote; urgency=low
 
   *  New upstream updates
