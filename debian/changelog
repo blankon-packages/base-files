@@ -18,7 +18,7 @@ base-files (6.5blankon1) rote; urgency=low
     - share/profile: Fix incorrect ordering of /etc/profile.d handling vs. PS1
     check, bringing this more into line with Debian 
 
- -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 08 Nov 2011 18:30:14 +0700
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 08 Nov 2011 18:36:16 +0700
 
 base-files (6.5) unstable; urgency=low
 
