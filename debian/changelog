@@ -1,3 +1,9 @@
+base-files (6.7blankon1) rote; urgency=low
+
+  * New upstream release
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 05 Mar 2012 20:20:00 +0700
+
 base-files (6.5blankon1) rote; urgency=low
 
   * Resynchronise with Debian.  Remaining changes:
