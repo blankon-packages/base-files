@@ -1,3 +1,9 @@
+base-files (6.7blankon2) rote; urgency=low
+
+  * /etc/debian_version rote
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 03 Apr 2012 23:58:14 +0700
+
 base-files (6.7blankon1) rote; urgency=low
 
   * New upstream release
