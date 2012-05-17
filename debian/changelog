@@ -1,3 +1,9 @@
+base-files (6.7blankon4) rote; urgency=low
+
+  * /etc/motd to BlankO Rote
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 17 May 2012 11:44:53 +0700
+
 base-files (6.7blankon3) rote; urgency=low
 
   * 10-help-text remove dist

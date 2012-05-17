@@ -27,9 +27,9 @@ if [ -z "$DISTRIB_RELEASE" ] && [ -x /usr/bin/lsb_release ]; then
 	DISTRIB_RELEASE=$(lsb_release -sr)
 fi
 
-URL="https://blankonlinux.or.id/"
+URL="http://dev.blankonlinux.or.id/"
 if uname -r | grep -qs "\-server"; then
-	
+	URL="http://dev.blankonlinux.or.id/wiki/Dokumentasi/$DISTRIB_RELEASE"
 fi
 
 printf "\n * Documentation:  %s\n" "$URL"
