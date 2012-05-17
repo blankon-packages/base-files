@@ -29,7 +29,7 @@ fi
 
 URL="https://blankonlinux.or.id/"
 if uname -r | grep -qs "\-server"; then
-	URL="https://blankonlinux.or.id/$DISTRIB_RELEASE/serverguide/C"
+	
 fi
 
 printf "\n * Documentation:  %s\n" "$URL"
