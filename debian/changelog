@@ -1,3 +1,56 @@
+base-files (6.11blankon1) suroboyo; urgency=low
+
+  * New upstream release.
+  * Merge with debian sid
+
+ -- Mahyuddin <dotovr@dotovr>  Wed, 10 Oct 2012 00:31:46 +0700
+
+base-files (6.11) unstable; urgency=medium
+
+  * Create /etc/motd instead of /etc/motd.tail, with same default contents,
+    as initscripts is now using /etc/motd again as a real file.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 17 Jun 2012 14:14:44 +0200
+
+base-files (6.10) unstable; urgency=low
+
+  * Record md5sums of unmodified /etc/profile versions so that we can
+    upgrade it automatically, as it's done in Ubuntu.
+  * In the initial install, create /etc/motd.tail instead of /etc/motd,
+    as /etc/motd is converted to a symlink by initscripts and /etc/motd.tail
+    is since a long time the master copy to which the output of uname is added.
+    Remove postinst code which tries to update /etc/motd, as it does no longer
+    work and the file has not changed in a lot of time. Will add code to
+    update /etc/motd.tail based on md5sum if it ever changes in a future.
+  * Implement proposed transition plan for group staff in /usr/local.
+    The file /etc/staff-group-for-usr-local is now created on upgrades
+    from releases before 6.10 and (for now) also on initial install.
+  * Removed reference to /etc/nsswitch.conf in extended description, as
+    the file is being moved to libc-bin.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 09 Jun 2012 17:41:30 +0200
+
+base-files (6.9) unstable; urgency=low
+
+  * We can't make /etc/profile a conffile without triggering a piuparts
+    check which is considered to be serious. Sorry, /etc/profile
+    will be handled as before for now. Closes: #673767.
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 21 May 2012 15:12:06 +0200
+
+base-files (6.8) unstable; urgency=low
+
+  * Added /etc/os-release. Closes: #659853. Note: for stable releases
+    this file will look like it's suggested in the bug report above.
+    Also, like /etc/debian_version, this file should only be considered
+    meaningful for stable releases, which testing and unstable are not.
+  * By popular demand, make /etc/profile a conffile. Closes: #668871.
+  * Added /sys for all systems but the Hurd. Closes: #670091.
+  * Added /proc for the Hurd, as it's already being used.
+  * Added a lintian override for /root being 700.
+
+ -- Santiago Vila <sanvila@debian.org>  Thu, 17 May 2012 00:08:42 +0200
+
 base-files (6.7blankon8) suroboyo; urgency=low
 
   * Suroboyo First
@@ -39,6 +92,25 @@ base-files (6.7blankon1) rote; urgency=low
   * New upstream release
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 05 Mar 2012 20:20:00 +0700
+
+base-files (6.7) unstable; urgency=low
+
+  * Switch to "compat" again in default /etc/nsswitch.conf. It is not
+    obsolete and it should not go away. Closes: #651356.
+    Thanks a lot to Petter Reinholdtsen.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 04 Mar 2012 01:02:00 +0100
+
+base-files (6.6) unstable; urgency=low
+
+  * Switch to "files" instead of "compat" in default /etc/nsswitch.conf.
+    That was only useful for libc5. The new default will only take
+    effect for new installs. Thanks to Roger Leigh. Closes: #651356.
+  * Reword the very first question in base-files FAQ. Closes: #622200.
+  * When migrating /var/run and /var/lock, create relative symlinks
+    instead of absolute ones. Useful for chroots. Closes: #652301.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 03 Mar 2012 16:35:22 +0100
 
 base-files (6.5blankon1) rote; urgency=low
 

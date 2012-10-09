@@ -1,0 +1,8 @@
+PRETTY_NAME="BlankOn Suroboyo (Development Branch)"
+NAME="BlankOn"
+ID=blankon
+ANSI_COLOR="1;31"
+VERSION="9.0 (Suroboyo)"
+VERSION_ID=9.0
+HOME_URL="http://blankonlinux.or.id/"
+BUG_REPORT_URL="http://dev.blankonlinux.or.id/report/"
