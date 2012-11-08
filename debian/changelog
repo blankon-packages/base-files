@@ -1,3 +1,21 @@
+base-files (6.12blankon1) suroboyo; urgency=low
+
+  * Merge with Debian Sid. 
+
+ -- Mahyuddin <dotovr@di.blankon.in>  Thu, 08 Nov 2012 20:40:35 +0700
+
+base-files (6.12) unstable; urgency=low
+
+  * Added HOME_URL, SUPPORT_URL and BUG_REPORT_URL to /etc/os-release.
+    Reported by Raphaël Hertzog. Closes: #681480.
+  * Added Breaks: sendfile (<< version in squeeze) to help sendfile bug
+    regarding improper modification of /etc/profile to be fixed faster.
+    Reported by Andreas Beckmann. Closes: #689835.
+  * Make /var/run and /var/lock absolute again.
+    Reported by Roger Leigh. Closes: #690345.
+
+ -- Santiago Vila <sanvila@debian.org>  Sat, 27 Oct 2012 17:41:00 +0200
+
 base-files (6.11blankon1) suroboyo; urgency=low
 
   * New upstream release.
