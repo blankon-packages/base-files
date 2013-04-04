@@ -11,9 +11,11 @@ ifeq ($(DEB_HOST_GNU_SYSTEM),gnu)
   OSNAME=GNU/Hurd
 endif
 
-VENDORFILE = debian
+VENDORFILE = blankon
 
 VERSION = $(shell cat etc/debian_version)
+
+DEBVERSION := $(shell dpkg-parsechangelog | grep ^Version: | cut -d' ' -f2)
 
 build:
 	touch build
@@ -21,7 +23,7 @@ build:
 clean:
 	rm -f build
 	rm -f `find . -name "*~"`
-	rm -rf debian/tmp debian/files* core debian/substvars
+	rm -rf debian/tmp debian/lsb-release-udeb debian/files* core debian/substvars
 
 binary-arch: build
 	rm -rf debian/tmp
@@ -74,6 +76,18 @@ endif
 	dpkg --build debian/tmp ..
 
 binary-indep: build
+	rm -rf debian/lsb-release-udeb
+	install -d debian/lsb-release-udeb/DEBIAN debian/lsb-release-udeb/etc
+	install -p -m 644 etc/lsb-release debian/lsb-release-udeb/etc
+	chown -R root:root debian/lsb-release-udeb
+	cd debian/lsb-release-udeb && chmod 755 `find . -type d`
+	dpkg-gencontrol -plsb-release-udeb \
+		-Tdebian/lsb-release-udeb.substvars -Pdebian/lsb-release-udeb \
+		-isp -fdebian/files~
+	dpkg-distaddfile lsb-release-udeb_$(DEBVERSION)_all.udeb \
+		debian-installer extra
+	dpkg --build debian/lsb-release-udeb \
+		../lsb-release-udeb_$(DEBVERSION)_all.udeb
 
 binary: binary-indep binary-arch
 
