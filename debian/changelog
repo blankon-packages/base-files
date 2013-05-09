@@ -1,3 +1,17 @@
+base-files (7.2blankon1) suroboyo; urgency=low
+
+  * New Upstream Release
+  * Merghe whit jessie/sid
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 09 May 2013 07:57:34 +0700
+
+base-files (7.2) unstable; urgency=medium
+
+  * Changed issue, issue.net, debian_version and os-release to read "jessie/sid",
+    and dropped VERSION and VERSION_ID from os-release.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 05 May 2013 18:19:00 +0200
+
 base-files (7.1blankon2) suroboyo; urgency=low
 
   * Re-added etc/lsb-release
