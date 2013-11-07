@@ -1,3 +1,9 @@
+base-files (7.2blankon2) suroboyo; urgency=low
+
+  * Set to BlankOn Suroboyo Final Release
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 07 Nov 2013 16:57:02 +0700
+
 base-files (7.2blankon1) suroboyo; urgency=low
 
   * New Upstream Release
