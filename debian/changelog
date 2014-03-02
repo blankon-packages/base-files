@@ -1,3 +1,9 @@
+base-files (7.2blankon3) tambora; urgency=low
+
+  * New Release BlankOn Tambora
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 02 Mar 2014 17:14:18 +0700
+
 base-files (7.2blankon2) suroboyo; urgency=low
 
   * Set to BlankOn Suroboyo Final Release
