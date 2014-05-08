@@ -1,8 +1,6 @@
 /etc/debian_version
 /etc/dpkg/origins/debian
-/etc/dpkg/origins/blankon
 /etc/host.conf
 /etc/issue
 /etc/issue.net
 /etc/os-release
-/etc/lsb-release
