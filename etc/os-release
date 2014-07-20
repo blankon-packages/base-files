@@ -1,9 +1,7 @@
-PRETTY_NAME="BlankOn #OSNAME# Tambora"
+PRETTY_NAME="BlankOn #OSNAME# tambora"
 NAME="BlankOn #OSNAME#"
 ID=blankon
 ANSI_COLOR="1;31"
-HOME_URL="http://blankonlinux.or.id/"
+HOME_URL="http://www.blankonlinux.or.id/"
+SUPPORT_URL="http://dev.blankonlinux.or.id/newticket/"
 BUG_REPORT_URL="http://dev.blankonlinux.or.id/report/"
-
-
-
