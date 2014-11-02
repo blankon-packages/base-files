@@ -2,7 +2,7 @@ Source: base-files
 Section: admin
 Priority: required
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
-XSBC-Original-Maintainer: Santiago Vila <sanvila@debian.org>
+XSBC-original-Maintainer: Santiago Vila <sanvila@debian.org>
 Standards-Version: 3.9.5
 
 Package: base-files
