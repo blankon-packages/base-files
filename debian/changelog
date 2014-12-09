@@ -1,3 +1,9 @@
+base-files (8blankon2) tambora; urgency=low
+
+  * Chanes debian/rules VENDORFILE = blankon 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 09 Dec 2014 09:55:39 +0000
+
 base-files (8blankon1) tambora; urgency=low
 
   * New Upstream Release 
