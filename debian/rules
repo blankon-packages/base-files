@@ -45,7 +45,6 @@ binary-arch: build
 	install -p -m 644 debian/lintian \
 		debian/tmp/usr/share/lintian/overrides/$(package)
 	ln -s GFDL-1.3 debian/tmp/usr/share/common-licenses/GFDL
-	ln -s LGPL-3 debian/tmp/usr/share/common-licenses/LGPL
 	ln -s GPL-3 debian/tmp/usr/share/common-licenses/GPL
 	ln -s README $(docdir)/FAQ
 	install -p -m 644 etc/* debian/tmp/etc
