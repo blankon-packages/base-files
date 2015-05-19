@@ -1,3 +1,27 @@
+base-files (9.2blankon1) tambora; urgency=low
+
+  * New Upstream Release 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 19 May 2015 17:17:17 +0700
+
+base-files (9.2) unstable; urgency=medium
+
+  * Create md5sums in a reproducible way.
+  * Use "dpkg-parsechangelog -S Date" to get the date.
+  * Allow building with umasks other than 022, as far as
+    they make a minimum of sense. Closes: #774498.
+
+ -- Santiago Vila <sanvila@debian.org>  Sun, 17 May 2015 14:44:10 +0200
+
+base-files (9.1) unstable; urgency=low
+
+  * Use gzip -n to stop recording current time in gzip headers.
+  * Fix mtimes before building the binary package.
+  * The package should now build reproducibly. Closes: #774498.
+    Thanks to Jérémy Bobbio <lunar@debian.org>.
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 15 May 2015 12:45:34 +0200
+
 base-files (9blankon1) tambora; urgency=low
 
   * New Upstream Release 
