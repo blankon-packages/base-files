@@ -1,3 +1,9 @@
+base-files (9.4blankon2) tambora; urgency=medium
+
+  * Rebuild for armhf 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 11 Sep 2015 07:16:15 +0700
+
 base-files (9.4blankon1) tambora; urgency=medium
 
   * New Upstream Release 
