@@ -1,3 +1,9 @@
+base-files (9.4blankon3) tambora; urgency=medium
+
+  * Depends: blankon-keyring 
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 02 Oct 2015 05:29:35 +0700
+
 base-files (9.4blankon2) tambora; urgency=medium
 
   * Rebuild for armhf 
