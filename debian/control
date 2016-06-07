@@ -3,7 +3,7 @@ Section: admin
 Priority: required
 Maintainer: BlankOn Developers <blankon-dev@googlegroups.com>
 XSBC-original-Maintainer: Santiago Vila <sanvila@debian.org>
-Standards-Version: 3.9.5
+Standards-Version: 3.9.7
 
 Package: base-files
 Provides: base
