@@ -1,6 +1,12 @@
+base-files (9.6blankon3) tambora; urgency=medium
+
+  * Drop Depends blankon-role-keyring
+
+ -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 27 Jun 2016 11:38:00 +0700
+
 base-files (9.6blankon2) tambora; urgency=medium
 
-  * Add Depends blanon-role-keyring 
+  * Add Depends blankon-role-keyring 
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 24 Jun 2016 23:14:17 +0700
 
