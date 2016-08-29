@@ -1,6 +1,12 @@
+base-files (9.6blankon5) tambora; urgency=medium
+
+  * Add depends blankon-role-keyring
+
+ -- Mahyuddin <yudi.al@gmail.com>  Mon, 29 Aug 2016 22:49:46 +0700
+
 base-files (9.6blankon4) tambora; urgency=medium
 
-  * Rebuild for armhf 
+  * Rebuild for armhf
 
  -- Rahman Yusri Aftian <aftian@blankon.id>  Mon, 29 Aug 2016 19:24:04 +0700
 
@@ -12,7 +18,7 @@ base-files (9.6blankon3) tambora; urgency=medium
 
 base-files (9.6blankon2) tambora; urgency=medium
 
-  * Add Depends blankon-role-keyring 
+  * Add Depends blankon-role-keyring
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 24 Jun 2016 23:14:17 +0700
 
@@ -43,19 +49,19 @@ base-files (9.5) unstable; urgency=medium
 
 base-files (9.4blankon3) tambora; urgency=medium
 
-  * Depends: blankon-keyring 
+  * Depends: blankon-keyring
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 02 Oct 2015 05:29:35 +0700
 
 base-files (9.4blankon2) tambora; urgency=medium
 
-  * Rebuild for armhf 
+  * Rebuild for armhf
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Fri, 11 Sep 2015 07:16:15 +0700
 
 base-files (9.4blankon1) tambora; urgency=medium
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Wed, 19 Aug 2015 19:47:13 +0700
 
@@ -82,7 +88,7 @@ base-files (9.3) unstable; urgency=medium
 
 base-files (9.2blankon1) tambora; urgency=low
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 19 May 2015 17:17:17 +0700
 
@@ -106,7 +112,7 @@ base-files (9.1) unstable; urgency=low
 
 base-files (9blankon1) tambora; urgency=low
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sat, 02 May 2015 03:33:14 +0700
 
@@ -121,13 +127,13 @@ base-files (9) unstable; urgency=medium
 
 base-files (8blankon2) tambora; urgency=low
 
-  * Chanes debian/rules VENDORFILE = blankon 
+  * Chanes debian/rules VENDORFILE = blankon
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 09 Dec 2014 09:55:39 +0000
 
 base-files (8blankon1) tambora; urgency=low
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 09 Dec 2014 09:52:19 +0000
 
@@ -150,7 +156,7 @@ base-files (8) unstable; urgency=low
 
 base-files (7.10blankon1) tambora; urgency=low
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Raman Yusri Aftian <aftian@di.blankon.in>  Sun, 02 Nov 2014 04:35:08 +0000
 
@@ -206,7 +212,7 @@ base-files (7.7) unstable; urgency=low
 
 base-files (7.6blankon1) tambora; urgency=low
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Santiago Vila <aftian@di.blankon.in>  Sat, 11 Oct 2014 09:56:18 +0700
 
@@ -224,19 +230,19 @@ base-files (7.6) unstable; urgency=low
 
 base-files (7.5blankon3) tambora; urgency=medium
 
-  * origins/blankon parrent: Debian 
+  * origins/blankon parrent: Debian
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 29 Jul 2014 20:44:32 +0700
 
 base-files (7.5blankon2) tambora; urgency=medium
 
-  * Fix Typo at control 
+  * Fix Typo at control
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 21 Jul 2014 15:29:21 +0700
 
 base-files (7.5blankon1) tambora; urgency=medium
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Mon, 21 Jul 2014 15:26:25 +0700
 
@@ -250,7 +256,7 @@ base-files (7.5) unstable; urgency=medium
 
 base-files (7.4blankon1) tambora; urgency=medium
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Sun, 20 Jul 2014 22:13:15 +0700
 
@@ -267,7 +273,7 @@ base-files (7.4) unstable; urgency=medium
 
 base-files (7.3blankon1) tambora; urgency=medium
 
-  * New Upstream Release 
+  * New Upstream Release
 
  -- Rahman Yusri Aftian <aftian@localhost>  Thu, 08 May 2014 13:55:52 +0000
 
@@ -430,7 +436,7 @@ base-files (6.7blankon8) suroboyo; urgency=low
 
 base-files (6.7blankon6) rote; urgency=low
 
-  * Release Rote 
+  * Release Rote
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Thu, 16 Aug 2012 17:11:59 +0000
 
@@ -499,9 +505,9 @@ base-files (6.5blankon1) rote; urgency=low
     - Added information about the docs web page.
     - Restore order line in /etc/host.conf with a comment.
     - Ship /root mode 700 by default.
-    - Add update-motd scripts. 
+    - Add update-motd scripts.
     - share/profile: Fix incorrect ordering of /etc/profile.d handling vs. PS1
-    check, bringing this more into line with Debian 
+    check, bringing this more into line with Debian
 
  -- Rahman Yusri Aftian <aftian@di.blankon.in>  Tue, 08 Nov 2011 18:36:16 +0700
 
