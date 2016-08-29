@@ -1,3 +1,9 @@
+base-files (9.6blankon4) tambora; urgency=medium
+
+  * Rebuild for armhf 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Mon, 29 Aug 2016 19:24:04 +0700
+
 base-files (9.6blankon3) tambora; urgency=medium
 
   * Drop Depends blankon-role-keyring
