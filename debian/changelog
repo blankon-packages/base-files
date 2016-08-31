@@ -1,3 +1,9 @@
+base-files (9.6blankon7) tambora; urgency=medium
+
+  * Test build armhf
+
+ -- Mahyuddin <yudi.al@gmail.com>  Wed, 31 Aug 2016 15:53:51 +0700
+
 base-files (9.6blankon6) tambora; urgency=medium
 
   * Remove depends blankon-role-keyring
