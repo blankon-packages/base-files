@@ -1,3 +1,9 @@
+base-files (9.6blankon6) tambora; urgency=medium
+
+  * Remove depends blankon-role-keyring
+
+ -- Mahyuddin <yudi.al@gmail.com>  Wed, 31 Aug 2016 11:32:12 +0700
+
 base-files (9.6blankon5) tambora; urgency=medium
 
   * Add depends blankon-role-keyring
