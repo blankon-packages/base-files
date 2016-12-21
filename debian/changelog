@@ -1,3 +1,9 @@
+base-files (9.6blankon8) tambora; urgency=medium
+
+  * Go to Release 
+
+ -- Rahman Yusri Aftian <aftian@blankon.id>  Wed, 21 Dec 2016 21:08:35 +0700
+
 base-files (9.6blankon7) tambora; urgency=medium
 
   * Test build armhf
