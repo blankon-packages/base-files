@@ -1,6 +1,6 @@
-PRETTY_NAME="BlankOn #OSNAME# 11 (uluwatu)"
+PRETTY_NAME="BlankOn #OSNAME# 12 (verbeek)"
 NAME="BlankOn #OSNAME#"
 ID=blankon
 HOME_URL="http://www.blankonlinux.or.id/"
 SUPPORT_URL="http://dev.blankonlinux.or.id/newticket/"
-BUG_REPORT_URL="http://dev.blankonlinux.or.id/report/"
+BUG_REPORT_URL="ttp://dev.blankonlinux.or.id/report/"

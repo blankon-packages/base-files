@@ -1,15 +1,43 @@
-base-files (10.1blankon2) uluwatu; urgency=medium
+base-files (11blankon1) verbeek; urgency=medium
 
-  * Add lsb-release
-  * 
+  * New Upstream release
+  * Change issue, issue.net, debian_version and os-release to read "verbeek"
 
- -- Hanhan Husna <matcherapy@gmail.com>  Wed, 02 May 2018 09:54:58 +0700
+ -- Anto Samalona <ansamsoftdev@gmail.com>  Thu, 26 Nov 2020 13:48:49 +0800
 
-base-files (10.1blankon1) uluwatu; urgency=medium
+base-files (11) unstable; urgency=medium
 
-  * New upstream release
+  * Change issue, issue.net, debian_version and os-release to read
+    "bullseye/sid".
+  * Drop VERSION, VERSION_ID and CODENAME from os-release.
+  * Make "mesg n" silent in default /root/.profile. Closes: #930654.
 
- -- antosamalona <ansamsoftdev@gmail.com>  Mon, 29 Jan 2018 10:06:00 +0800
+ -- Santiago Vila <sanvila@debian.org>  Tue, 09 Jul 2019 12:05:50 +0200
+
+base-files (10.3) unstable; urgency=medium
+
+  * Add Breaks: debian-security-support (<< 2019.04.25). Closes: #928172.
+    This is the first version of debian-security-support which does not break
+    when /etc/debian_version contains a string in the form "10.x".
+
+ -- Santiago Vila <sanvila@debian.org>  Mon, 13 May 2019 22:25:32 +0200
+
+base-files (10.2) unstable; urgency=medium
+
+  * Release candidate for buster as stable:
+  - Use "10" as version in /etc/issue and /etc/issue.net.
+    (never expected to change after buster is released)
+  - Use 10.0 as version in /etc/debian_version.
+    (expected to change at every point release)
+  - Change PRETTY_NAME in /usr/lib/os-release, adding 10 as version number
+    and "(buster)" as codename. Add also VERSION_ID and VERSION.
+    (never expected to change)
+  - Add VERSION_CODENAME to os-release. Closes: #829245. This is optional
+    according to the specs but some people find it useful. Please note that
+    for now this is only expected to be present on stable releases.
+  - Update README (buster -> bullseye).
+
+ -- Santiago Vila <sanvila@debian.org>  Fri, 19 Apr 2019 13:05:00 +0200
 
 base-files (10.1) unstable; urgency=medium
 
