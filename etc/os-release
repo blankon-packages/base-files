@@ -3,4 +3,4 @@ NAME="BlankOn #OSNAME#"
 ID=blankon
 HOME_URL="http://www.blankonlinux.or.id/"
 SUPPORT_URL="http://dev.blankonlinux.or.id/newticket/"
-BUG_REPORT_URL="ttp://dev.blankonlinux.or.id/report/"
+BUG_REPORT_URL="http://dev.blankonlinux.or.id/report/"
