@@ -1,3 +1,9 @@
+base-files (11blankon2) verbeek; urgency=medium
+
+  * Change support and bug report to github
+
+ -- Anto Samalona <ansamsoftdev@gmail.com>  Sun, 06 Dec 2020 21:27:49 +0800
+
 base-files (11blankon1) verbeek; urgency=medium
 
   * New Upstream release
