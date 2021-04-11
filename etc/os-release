@@ -1,6 +1,7 @@
-PRETTY_NAME="BlankOn #OSNAME# 12 (verbeek)"
+PRETTY_NAME="BlankOn #OSNAME# 12 (development branch)"
 NAME="BlankOn #OSNAME#"
 ID=blankon
 HOME_URL="http://www.blankonlinux.or.id/"
 SUPPORT_URL="https://github.com/blankon/verbeek/issues"
 BUG_REPORT_URL="https://github.com/blankon/verbeek/issues"
+VERSION_CODENAME=verbeek
