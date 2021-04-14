@@ -1,3 +1,9 @@
+base-files (11blankon3) verbeek; urgency=medium
+
+  * fix wrong pointing vendor file fo census
+
+ -- Anto Samalona <ansamsoftdev@gmail.com>  Thu, 15 Apr 2021 06:38:17 +0800
+
 base-files (11blankon2) verbeek; urgency=medium
 
   * Change support and bug report to github
