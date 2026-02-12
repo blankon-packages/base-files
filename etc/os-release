@@ -8,3 +8,4 @@ VERSION_CODENAME=verbeek
 HOME_URL="https://blankon.github.io"
 SUPPORT_URL="https://github.com/blankon/verbeek/issues"
 BUG_REPORT_URL="https://github.com/blankon/verbeek/issues"
+LOGO=blankon-logo

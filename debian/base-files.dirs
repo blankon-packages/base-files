@@ -23,6 +23,9 @@ usr/share/info
 usr/share/lintian/overrides
 usr/share/man
 usr/share/misc
+usr/share/icons/hicolor/scalable/apps
+usr/share/blankon-logos
+usr/share/pixmaps
 usr/src
 var
 var/backups

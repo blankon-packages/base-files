@@ -1,3 +1,12 @@
+base-files (14blankon4) verbeek; urgency=medium
+
+  * Add BlankOn logos and register as vendor-logos alternative
+  * Create /usr/share/blankon-logos directory structure for alternative
+  * Priority 100 overrides Debian's desktop-base priority 50
+  * Install logos to /usr/share/pixmaps and /usr/share/icons
+  * Add LOGO=blankon-logo to os-release
+
+ -- Mohammad Raska <mohraska@gmail.com>  Tue, 27 Jan 2026 03:00:00 +0700
 base-files (14blankon3) verbeek; urgency=medium
 
   * fix gpg sign

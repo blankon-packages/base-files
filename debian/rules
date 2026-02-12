@@ -46,6 +46,22 @@ override_dh_auto_install:
 	install -p -m 644 licenses/* $(DESTDIR)/usr/share/common-licenses
 	install -p -m 644 origins/*  $(DESTDIR)/etc/dpkg/origins
 	install -p -m 644 share/*    $(DESTDIR)/usr/share/base-files
+	mkdir -p $(DESTDIR)/usr/share/pixmaps
+	install -p -m 644 logos/*.png $(DESTDIR)/usr/share/pixmaps
+	install -p -m 644 logos/*.svg $(DESTDIR)/usr/share/pixmaps
+	install -p -m 644 logos/blankon-logo.svg $(DESTDIR)/usr/share/icons/hicolor/scalable/apps/blankon-logo.svg
+	install -p -m 644 logos/blankon-logo-text.svg $(DESTDIR)/usr/share/icons/gnome-logo-text.svg
+	install -p -m 644 logos/blankon-logo-text-dark.svg $(DESTDIR)/usr/share/icons/gnome-logo-text-dark.svg
+	# Create blankon-logos directory for vendor-logos alternative
+	mkdir -p $(DESTDIR)/usr/share/blankon-logos/64x64
+	mkdir -p $(DESTDIR)/usr/share/blankon-logos/128x128
+	mkdir -p $(DESTDIR)/usr/share/blankon-logos/256x256
+	mkdir -p $(DESTDIR)/usr/share/blankon-logos/scalable
+	install -p -m 644 logos/blankon-logo.png $(DESTDIR)/usr/share/blankon-logos/64x64/emblem-blankon.png
+	install -p -m 644 logos/blankon-logo.png $(DESTDIR)/usr/share/blankon-logos/128x128/emblem-blankon.png
+	install -p -m 644 logos/blankon-logo.png $(DESTDIR)/usr/share/blankon-logos/256x256/emblem-blankon.png
+	install -p -m 644 logos/blankon-logo.svg $(DESTDIR)/usr/share/blankon-logos/scalable/emblem-blankon.svg
+	install -p -m 644 logos/blankon-logo-text.svg $(DESTDIR)/usr/share/blankon-logos/scalable/emblem-blankon-text.svg
 ifeq ($(DEB_HOST_GNU_SYSTEM),gnu)
 	rmdir $(DESTDIR)/sys
 endif
