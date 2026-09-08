@@ -1,10 +1,18 @@
-base-files (14blankon5) verbeek; urgency=medium
+base-files (14blankon6) sinambung; urgency=medium
+
+  * Rebrand release from Verbeek to Sinambung
+  * Update os-release PRETTY_NAME to "BlankOn Linux 26.0 Sinambung"
+  * Update VERSION, VERSION_CODENAME and issue tracker URLs
+
+ -- Herpiko Dwi Aguno <herpiko@gmail.com>  Wed, 09 Sep 2026 12:00:00 +0700
+
+base-files (14blankon5) sinambung; urgency=medium
 
   * Bump version from 12.0 to 26.0
 
  -- Herpiko Dwi Aguno <herpiko@gmail.com>  Sun, 15 Feb 2026 12:00:00 +0700
 
-base-files (14blankon4) verbeek; urgency=medium
+base-files (14blankon4) sinambung; urgency=medium
 
   * Add BlankOn logos and register as vendor-logos alternative
   * Create /usr/share/blankon-logos directory structure for alternative
@@ -13,19 +21,19 @@ base-files (14blankon4) verbeek; urgency=medium
   * Add LOGO=blankon-logo to os-release
 
  -- Mohammad Raska <mohraska@gmail.com>  Tue, 27 Jan 2026 03:00:00 +0700
-base-files (14blankon3) verbeek; urgency=medium
+base-files (14blankon3) sinambung; urgency=medium
 
   * fix gpg sign
 
  -- Hanhan <matcherapy@gmail.com>  Sat, 10 Jan 2026 09:33:03 +0700
 
-base-files (14blankon2) verbeek; urgency=medium
+base-files (14blankon2) sinambung; urgency=medium
 
   * edit os-release
 
  -- Hanhan <matcherapy@gmail.com>  Sat, 10 Jan 2026 00:20:03 +0700
 
-base-files (14blankon1) verbeek; urgency=medium
+base-files (14blankon1) sinambung; urgency=medium
 
   * new upstream
 

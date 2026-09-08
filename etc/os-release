@@ -1,11 +1,11 @@
 NAME="BlankOn Linux"
-VERSION="26.0 (Verbeek)"
+VERSION="26.0 (Sinambung)"
 ID=blankon
 ID_LIKE=debian
-PRETTY_NAME="BlankOn Linux 26.0 Verbeek"
+PRETTY_NAME="BlankOn Linux 26.0 Sinambung"
 VERSION_ID="26.0"
-VERSION_CODENAME=verbeek
+VERSION_CODENAME=sinambung
 HOME_URL="https://blankon.github.io"
-SUPPORT_URL="https://github.com/blankon/verbeek/issues"
-BUG_REPORT_URL="https://github.com/blankon/verbeek/issues"
+SUPPORT_URL="https://github.com/blankon/sinambung/issues"
+BUG_REPORT_URL="https://github.com/blankon/sinambung/issues"
 LOGO=blankon-logo
